@@ -1,0 +1,141 @@
+ /*estilos para el fondo y el menu*/
+ 
+ #fondoc1 {
+     background-image: url("../img/op3.jpg");
+     background-repeat: no-repeat;
+     /* no-repeat. Hace que la imagen de fondo no se repita en caso de que no llene toda la pantalla*/
+     background-size: cover;
+     /*cover es cubrir. Toda la imagen cubre la pantalla*/
+     height: 100vh;
+     /*vh, es alto de pantalla*/
+ }
+ 
+ #logo {
+     height: 20vh;
+ }
+ 
+ #barrac1 {
+     height: 10vh;
+     width: 100vw;
+     /*vw, ancho de pantalla*/
+     position: fixed;
+ }
+ 
+ #menuc1 {
+     font-size: 1rem;
+     /*fon-size. Dicta el tamño de letra*/
+     justify-content: flex-end;
+     /*flex-end en el justify-content. Acomoda a la derecha mi menu*/
+     text-decoration: none;
+ }
+ 
+ .nav-link {
+     outline: none;
+     border: none;
+     text-decoration: none;
+     list-style-type: none;
+     color: rgb(0, 0, 0);
+     margin-top: 2.5vh;
+     /*margin-top. dicta la distancia que tiene arriba*/
+     text-decoration: none;
+     /*text-decoration: none. Quita el subrayado del enlace*/
+ }
+ 
+ #menuc1 a.nav-link:hover {
+     font-weight: bold;
+     /* font-weight: bold. Hace la letra mas negrita*/
+     outline: none;
+     /* outline:none. Elimina el contorno alrededor de un elemento*/
+     color: #470505;
+     /* Cambia el color cuando el mouse está sobre el enlace por el hover*/
+     transform: scale(1);
+ }
+ 
+ #botonregistrar {
+     background-color: rgba(143, 44, 77, 0.705);
+     border-radius: 26px;
+     margin-bottom: 200px;
+     /*margin-BOTON. dicta la distancia que tiene EL BOTON CON LOS ELEMENTOS QUE TIENE ALREDEDOR*/
+ }
+ /*Estilos para el eslogan y su difuminado */
+ 
+ #bienvenida {
+     height: 80vh;
+     background-color: #ffffff94;
+     max-width: 1500px;
+     /* max width Establece un ancho máximo para tu sección */
+     margin: 0 auto;
+     /*margin  Auto-centra la sección horizontalmente */
+     padding: 20vh;
+     /* padding Agrega espacio dentro de la sección osea centra el texto en la cajita*/
+     margin-top: 10vh;
+     display: flex;
+     justify-content: center;
+     /* display y justify content acomodan los hijos del cuadro bienvenida AL CENTRO CON CENRTER*/
+ }
+ 
+ #eslogan {
+     margin-top: 10vh;
+     /*margin top hace que tenga un espacio arriba del cuadro blanco transparente del centro*/
+     text-align: center;
+     /*centra mi texto*/
+     font-family: 'Trebuchet MS', sans-serif;
+     font-size: 7vh;
+     /*font size da el tamaño a mi letra*/
+     font-weight: bold;
+     /*font weight bol pone negritas las letras*/
+ }
+ /*Estilos para el boton de entrar */
+ 
+ #boton1 {
+     text-align: center;
+     margin-top: -25vh;
+ }
+ 
+ #entraya {
+     background-color: #6d2020;
+     height: 9vh;
+     width: 14vw;
+     font-size: 4vh;
+     border-radius: 14px;
+     margin-top: 10vh;
+     color: rgb(255, 255, 255);
+     transition: background-color 0.3s ease;
+ }
+ 
+ #entraya:hover {
+     color: #ffffff;
+     transform: scale(1.1);
+ }
+ /*Estilos para el login */
+ 
+ #contenedorlogin {
+     display: flex;
+     justify-content: center;
+ }
+ 
+ #login {
+     margin-top: 15vh;
+     width: 22vw;
+     height: 75vh;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+ }
+ 
+ #datos {
+     margin-top: 20vh;
+     border-radius: 5px;
+ }
+ 
+ .form-group {
+     margin-bottom: 30px;
+ }
+ 
+ #labelregistro {
+     display: block;
+     font-weight: bold;
+ }
+ 
+ #iniciarsesion {
+     border-radius: 20px;
+     left: -20vw;
+ }
