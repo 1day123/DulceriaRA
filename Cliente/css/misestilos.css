@@ -112,6 +112,7 @@
  #contenedorlogin {
      display: flex;
      justify-content: center;
+    
  }
  
  #login {
@@ -138,4 +139,9 @@
  #iniciarsesion {
      border-radius: 20px;
      left: -20vw;
+ }
+ #fondoregistrar{
+    background-color: #470505;
+    height: 100vh;
+
  }
