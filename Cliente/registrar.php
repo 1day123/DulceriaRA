@@ -20,6 +20,7 @@
   <div class="row" id="contenedorlogin">
     <section id="login">
       <form id="datos">
+        <img src="img/usuario.png" alt="" id="imagenusuariologin">
       <div class="form-group">
         <label for="" id="labelregistro">Correo</label>
         <br>

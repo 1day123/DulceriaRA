@@ -112,19 +112,26 @@
  #contenedorlogin {
      display: flex;
      justify-content: center;
+     align-items: center;
     
  }
  
  #login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
      margin-top: 15vh;
      width: 22vw;
      height: 75vh;
      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+     background-color: #ffffffee;
  }
  
  #datos {
-     margin-top: 20vh;
+     margin-top: vh;
      border-radius: 5px;
+     font-size: 1.2rem;
+
  }
  
  .form-group {
@@ -141,7 +148,17 @@
      left: -20vw;
  }
  #fondoregistrar{
-    background-color: #470505;
+   background-image: url("../img/usud2.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
     height: 100vh;
 
+ }
+ #imagenusuariologin{
+   width: 13vw;
+   height: 25vh;
+   margin-left: 10px;
+   
+  margin-top: -43vh;
  }
