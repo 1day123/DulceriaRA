@@ -14,34 +14,46 @@
 </head>
 
 <body>
- 
 
-<div class="container-fluid" id="fondoregistrar">
-  <div class="row" id="contenedorlogin">
-    <section id="login">
-      <form id="datos">
-        <img src="img/usuario.png" alt="" id="imagenusuariologin">
-      <div class="form-group">
-        <label for="" id="labelregistro">Correo</label>
-        <br>
-        <input type="text" placeholder="Correo" >
 
-      </div>
-      <div class="form-group">
+  <div class="container-fluid" id="fondoregistrar">
+    <div class="row" id="contenedorlogin">
+      <section id="login">
+        <form id="datos">
+          <img src="img/usuario.png" alt="" id="imagenusuariologin">
+          <div class="form-group">
+            <label for="" id="labelregistro">Correo</label>
+            <br>
+            <input class="inputis" type="text" placeholder="Correo">
 
-        <label for="" id="labelregistro">Contraseña</label>
-        <br>
-        <input type="password" placeholder="Contraseña" >
-      </div>
-      <button type="submit" id="iniciarsesion">Iniciar sesión</button>
-        
-      </form>
-    </section>
+          </div>
+          <div class="form-group">
+
+            <label for="" id="labelregistro">Contraseña</label>
+            <br>
+            <input class="inputis" type="password" placeholder="Contraseña">
+          </div>
+          <button type="submit" id="iniciarsesion">Iniciar sesión</button>
+
+          <div class="row">
+            <div class="col">
+              <input class="form-check-input" type="checkbox"  id="recordarme">
+              <label class="form-check-label" for="flexCheckIndeterminate">
+                Recordarme
+              </label>
+            </div>
+            <div class="col">
+              <a href="">Recuperar contraseña</a>
+            </div>
+          </div>
+
+        </form>
+      </section>
+    </div>
   </div>
-</div>
 
 
-  
+
 
   <!-- Optional JavaScript; choose one of the two! -->
 

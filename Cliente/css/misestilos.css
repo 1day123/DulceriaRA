@@ -1,7 +1,7 @@
  /*estilos para el fondo y el menu*/
- 
+
  #fondoc1 {
-     background-image: url("../img/op3.jpg");
+    background: radial-gradient(circle, #ff000085, #ff8c009f, #ff00009c);/*hace que elfondo tenga un degradado circular*/
      background-repeat: no-repeat;
      /* no-repeat. Hace que la imagen de fondo no se repita en caso de que no llene toda la pantalla*/
      background-size: cover;
@@ -9,18 +9,18 @@
      height: 100vh;
      /*vh, es alto de pantalla*/
  }
- 
+
  #logo {
      height: 20vh;
  }
- 
+
  #barrac1 {
      height: 10vh;
      width: 100vw;
      /*vw, ancho de pantalla*/
      position: fixed;
  }
- 
+
  #menuc1 {
      font-size: 1rem;
      /*fon-size. Dicta el tamño de letra*/
@@ -28,7 +28,7 @@
      /*flex-end en el justify-content. Acomoda a la derecha mi menu*/
      text-decoration: none;
  }
- 
+
  .nav-link {
      outline: none;
      border: none;
@@ -40,25 +40,26 @@
      text-decoration: none;
      /*text-decoration: none. Quita el subrayado del enlace*/
  }
- 
+
  #menuc1 a.nav-link:hover {
      font-weight: bold;
      /* font-weight: bold. Hace la letra mas negrita*/
      outline: none;
      /* outline:none. Elimina el contorno alrededor de un elemento*/
-     color: #470505;
+     color: #f9f2f2;
      /* Cambia el color cuando el mouse está sobre el enlace por el hover*/
      transform: scale(1);
  }
- 
+
  #botonregistrar {
-     background-color: rgba(143, 44, 77, 0.705);
+    background: radial-gradient(circle, #ff000085, #ff8c009f, #ff00009c);/*hace que elfondo tenga un degradado circular*/
      border-radius: 26px;
      margin-bottom: 200px;
      /*margin-BOTON. dicta la distancia que tiene EL BOTON CON LOS ELEMENTOS QUE TIENE ALREDEDOR*/
  }
+
  /*Estilos para el eslogan y su difuminado */
- 
+
  #bienvenida {
      height: 80vh;
      background-color: #ffffff94;
@@ -73,7 +74,7 @@
      justify-content: center;
      /* display y justify content acomodan los hijos del cuadro bienvenida AL CENTRO CON CENRTER*/
  }
- 
+
  #eslogan {
      margin-top: 10vh;
      /*margin top hace que tenga un espacio arriba del cuadro blanco transparente del centro*/
@@ -85,15 +86,17 @@
      font-weight: bold;
      /*font weight bol pone negritas las letras*/
  }
+
  /*Estilos para el boton de entrar */
- 
+
  #boton1 {
      text-align: center;
      margin-top: -25vh;
  }
- 
+
  #entraya {
-     background-color: #6d2020;
+    background: radial-gradient(circle, #ff000085, #ff8c009f, #ff00009c);/*hace que elfondo tenga un degradado circular*/
+    border: 2px solid #CCC;
      height: 9vh;
      width: 14vw;
      font-size: 4vh;
@@ -102,63 +105,101 @@
      color: rgb(255, 255, 255);
      transition: background-color 0.3s ease;
  }
- 
+
  #entraya:hover {
      color: #ffffff;
      transform: scale(1.1);
+     font-weight: bold;
  }
+
  /*Estilos para el login */
- 
+
  #contenedorlogin {
      display: flex;
      justify-content: center;
      align-items: center;
-    
+
  }
- 
+
  #login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
      margin-top: 15vh;
      width: 22vw;
      height: 75vh;
      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-     background-color: #ffffffee;
+     background-color: #ffffffc6;
+
  }
- 
+
  #datos {
      margin-top: vh;
      border-radius: 5px;
      font-size: 1.2rem;
+     /*tamaño de letra del formulario*/
+
 
  }
- 
+
  .form-group {
      margin-bottom: 30px;
+     /* botton dicta el espacio de separado que tiene de los elementos que tiene alrededor*/
  }
- 
+
+ .inputis {
+     width: 90%;
+     /* ajusta el anclo del input*/
+     padding: 10px;
+     /*le da espacio al elemento de adentro a su alrededor*/
+    background-color: #ffffff;
+    border: 1px solid #ccc;/*ajusta el grosor del borde del input*/
+    border-radius: 5px;
+    
+}
+
  #labelregistro {
      display: block;
+     /*los forma en bloke uno en cima de otro*/
      font-weight: bold;
+     /*pone en negrita la letra*/
+    
  }
- 
+
  #iniciarsesion {
-     border-radius: 20px;
-     left: -20vw;
- }
- #fondoregistrar{
-   background-image: url("../img/usud2.jpg");
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-    height: 100vh;
+     background-image: linear-gradient(to right, #ff0000df, #ffe600f5);/*hace que el fondo tenga un color degradado a la derecha*/
+     border: 1px solid #ccc;
+     /* tamaño del grosor borde del boton  */
+     border-radius: 15px;
+     position: absolute;
+     /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
+     top: 75%;
+     /*dicta que se separe de su techo padre 70%*/
+     left: 50%;
+     /*se aleja de la izquierda a la mitad*/
+     transform: translate(-50%, -50%);
+     /*lo traslada completamente al centro pero es necesario el left y el top*/
+     font-weight: bold;
+     /*pone en negrita la letra*/
+     padding: 10px 20px;
+     margin: 5px;
+     color: #ffffff;
 
  }
- #imagenusuariologin{
-   width: 13vw;
-   height: 25vh;
-   margin-left: 10px;
-   
-  margin-top: -43vh;
+
+ #fondoregistrar {
+     background: radial-gradient(circle, #ff000085, #ff8c009f, #ff00009c);/*hace que elfondo tenga un degradado circular*/
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     height: 100vh;
+
+ }
+
+ #imagenusuariologin {
+     width: 13vw;
+     height: 25vh;
+     margin-left: 10px;
+
+     margin-top: -43vh;
  }
