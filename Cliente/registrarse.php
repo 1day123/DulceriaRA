@@ -9,42 +9,45 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="Cliente/css/misestilos.css">
+  <link rel="stylesheet" href="css/misestilos.css">
   <title>Hello, world!</title>
 </head>
 
 <body>
-  <div class="container-fluid" id="fondoc1">
-    <div class="row" id="barrac1">
-      <div class="col">
-        <img src="Cliente/img/logosfs.png" alt="" id="logo">
-        </div>
-        
-        <div class="col">
-        <nav class="nav navbar-expand-lg" id="menuc1">
-          <a class="nav-link" href="#">Lo mas comprado</a>
-          <a class="nav-link" href="#">Categoriasa</a>
-          <a class="nav-link" href="#">Mis compras</a>
-          <a class="nav-link" href="#">Buscar</a>
-          <a class="nav-link" href="Cliente/iniciarsesion.php" id="botonregistrar">Registrar</a>
-        </nav>
-      </div>
+
+
+  <div class="container-fluid" id="fondoregistrar">
+    <div class="row" id="contenedorlogin">
+      <section id="login">
+        <form id="datos">
+          <img src="img/usuario.png" alt="" id="imagenusuariologin">
+          <div class="form-group">
+            <h1>Registrarse</h1>
+            <label for="" id="labelregistro">Correo</label>
+            <br>
+            <input class="inputis" type="text" placeholder="Correo">
+
+          </div>
+          <div class="form-group">
+
+            <label for="" id="labelcontra">Contraseña</label>
+            <br>
+            <input class="inputis" type="password" placeholder="Contraseña">
+          </div>
+          <button type="submit" id="iniciarsesion">registrarse</button>
+
+          <div class="row">
+           
+            
+          </div>
+
+        </form>
+      </section>
     </div>
-    <div class="row" id="barra2c1">
-      <section id="bienvenida">
-        <h1 id="eslogan">"Descubre la magia de Puebla en cada dulce: ¡tradición en cada mordisco!"</h1>
-      </div>
-      <section id="boton1">
-      <a href="Cliente/iniciarsesion.php">
-        <button class="boton" id="entraya">Comprar</button>
-      </a>
-        </section>
-    </section>
-
-
-
-
   </div>
+
+
+
 
   <!-- Optional JavaScript; choose one of the two! -->
 

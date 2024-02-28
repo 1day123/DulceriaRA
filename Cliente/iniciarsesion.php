@@ -22,6 +22,7 @@
         <form id="datos">
           <img src="img/usuario.png" alt="" id="imagenusuariologin">
           <div class="form-group">
+            <h1>Inicia Sesion</h1>
             <label for="" id="labelregistro">Correo</label>
             <br>
             <input class="inputis" type="text" placeholder="Correo">
@@ -29,7 +30,7 @@
           </div>
           <div class="form-group">
 
-            <label for="" id="labelregistro">Contraseña</label>
+            <label for="" id="labelcontra">Contraseña</label>
             <br>
             <input class="inputis" type="password" placeholder="Contraseña">
           </div>

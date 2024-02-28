@@ -1,7 +1,8 @@
  /*estilos para el fondo y el menu*/
 
  #fondoc1 {
-    background: radial-gradient(circle, #ff000085, #ff8c009f, #ff00009c);/*hace que elfondo tenga un degradado circular*/
+     background: radial-gradient(circle, #ff000085, #ff8c009f, #ff00009c);
+     /*hace que elfondo tenga un degradado circular*/
      background-repeat: no-repeat;
      /* no-repeat. Hace que la imagen de fondo no se repita en caso de que no llene toda la pantalla*/
      background-size: cover;
@@ -52,7 +53,8 @@
  }
 
  #botonregistrar {
-    background: radial-gradient(circle, #ff000085, #ff8c009f, #ff00009c);/*hace que elfondo tenga un degradado circular*/
+     background: radial-gradient(circle, #48ff0085, #ff8c009f, #48ff009c);
+     /*hace que elfondo tenga un degradado circular*/
      border-radius: 26px;
      margin-bottom: 200px;
      /*margin-BOTON. dicta la distancia que tiene EL BOTON CON LOS ELEMENTOS QUE TIENE ALREDEDOR*/
@@ -95,8 +97,9 @@
  }
 
  #entraya {
-    background: radial-gradient(circle, #ff000085, #ff8c009f, #ff00009c);/*hace que elfondo tenga un degradado circular*/
-    border: 2px solid #CCC;
+     background: radial-gradient(circle, #10f34c85, #128a1ac0, #1bc86c9c);
+     /*hace que elfondo tenga un degradado circular*/
+     border: 2px solid #CCC;
      height: 9vh;
      width: 14vw;
      font-size: 4vh;
@@ -125,6 +128,7 @@
      display: flex;
      justify-content: center;
      align-items: center;
+     text-align: center;
      margin-top: 15vh;
      width: 22vw;
      height: 75vh;
@@ -134,12 +138,9 @@
  }
 
  #datos {
-     margin-top: vh;
      border-radius: 5px;
      font-size: 1.2rem;
-     /*tamaño de letra del formulario*/
-
-
+     margin-top: -30vh;
  }
 
  .form-group {
@@ -152,28 +153,41 @@
      /* ajusta el anclo del input*/
      padding: 10px;
      /*le da espacio al elemento de adentro a su alrededor*/
-    background-color: #ffffff;
-    border: 1px solid #ccc;/*ajusta el grosor del borde del input*/
-    border-radius: 5px;
-    
-}
+     background-color: #ffffff;
+     border: 1px solid #ccc;
+     /*ajusta el grosor del borde del input*/
+     border-radius: 5px;
 
- #labelregistro {
+ }
+
+ #labelcontra {
+     position: relative;
+     right: 90px;
      display: block;
      /*los forma en bloke uno en cima de otro*/
      font-weight: bold;
      /*pone en negrita la letra*/
-    
+     }
+
+ #labelregistro {
+     position: relative;
+     right: 110px;
+     display: block;
+     /*los forma en bloke uno en cima de otro*/
+     font-weight: bold;
+     /*pone en negrita la letra*/
+
  }
 
  #iniciarsesion {
-     background-image: linear-gradient(to right, #ff0000df, #ffe600f5);/*hace que el fondo tenga un color degradado a la derecha*/
+     background-image: linear-gradient(to right, #ff0000df, #ffe600f5);
+     /*hace que el fondo tenga un color degradado a la derecha*/
      border: 1px solid #ccc;
      /* tamaño del grosor borde del boton  */
      border-radius: 15px;
      position: absolute;
      /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
-     top: 75%;
+     top: 70%;
      /*dicta que se separe de su techo padre 70%*/
      left: 50%;
      /*se aleja de la izquierda a la mitad*/
@@ -188,7 +202,8 @@
  }
 
  #fondoregistrar {
-     background: radial-gradient(circle, #ff000085, #ff8c009f, #ff00009c);/*hace que elfondo tenga un degradado circular*/
+     background: radial-gradient(circle, #ff000085, #ff8c009f, #ff00009c);
+     /*hace que elfondo tenga un degradado circular*/
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center;
@@ -199,7 +214,6 @@
  #imagenusuariologin {
      width: 13vw;
      height: 25vh;
-     margin-left: 10px;
-
-     margin-top: -43vh;
+     margin-top: -8vh;
+     margin-bottom: 5vh;
  }
