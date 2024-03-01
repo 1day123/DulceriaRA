@@ -22,7 +22,7 @@
         <form id="datos">
           <img src="img/usuario.png" alt="" id="imagenusuariologin">
           <div class="form-group">
-            <h1>Inicia Sesion</h1>
+            <h1 id="titulois">Inicia Sesion</h1>
             <label for="" id="labelregistro">Correo</label>
             <br>
             <input class="inputis" type="text" placeholder="Correo">
@@ -34,9 +34,8 @@
             <br>
             <input class="inputis" type="password" placeholder="Contraseña">
           </div>
-          <button type="submit" id="iniciarsesion">Iniciar sesión</button>
-
-          <div class="row">
+          
+          <div class="row" id="infocontra">
             <div class="col">
               <input class="form-check-input" type="checkbox"  id="recordarme">
               <label class="form-check-label" for="flexCheckIndeterminate">
@@ -47,6 +46,7 @@
               <a href="">Recuperar contraseña</a>
             </div>
           </div>
+          <button type="submit" id="iniciarsesion">Iniciar sesión</button>
 
         </form>
       </section>

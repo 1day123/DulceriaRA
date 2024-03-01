@@ -35,7 +35,7 @@
         <h1 id="eslogan">"Descubre la magia de Puebla en cada dulce: ¡tradición en cada mordisco!"</h1>
       </div>
       <section id="boton1">
-      <a href="Cliente/iniciarsesion.php">
+      <a href="Cliente/iniciarsesion.php" >
         <button class="boton" id="entraya">Comprar</button>
       </a>
         </section>
