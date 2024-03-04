@@ -1,7 +1,9 @@
  /*estilos para el fondo y el menu*/
- 
+
  #fondoc1 {
-     background: radial-gradient(circle, #ff000085, #ff8c009f, #ff00009c);
+
+    background-image: url(../img/fondograsnillo.jpg);
+   
      /*hace que elfondo tenga un degradado circular*/
      background-repeat: no-repeat;
      /* no-repeat. Hace que la imagen de fondo no se repita en caso de que no llene toda la pantalla*/
@@ -11,25 +13,50 @@
      /*vh, es alto de pantalla*/
  }
  
+ 
+
+
+
  #logo {
      height: 20vh;
  }
+ @keyframes desplazarlogo{
+    /*keyframes: es una regla que manda instrucciones en el periodo de la animacion*/
+    /*se agrega un nombre a la animacion en este caso mover*/  
+    /*y adentro de nuestra regla van todas las animaciones que deceamos que tenga pero sucesivamente*/  
+    
+       
+        
+   
+      50% {
+        transform: rotate(360deg) translateY(10px); /* Mitad: rotación completa y traslación hacia abajo */
+      }
+      100% {
+        transform: rotate(-720deg) translateY(0); /* Final: rotación doble y traslación de regreso */
+      }
+      
+    }
+    #logo{
+        animation:desplazarlogo 2s ease-in  /* con alternate-reverse  comienza la animacion en el último paso y se mueve hacia atrás, luego hacia adelante por eso empieza con el 100%*/
+    }
  
+
  #barrac1 {
      height: 10vh;
      width: 100vw;
      /*vw, ancho de pantalla*/
      position: fixed;
  }
- 
+
  #menuc1 {
      font-size: 1rem;
      /*fon-size. Dicta el tamño de letra*/
      justify-content: flex-end;
      /*flex-end en el justify-content. Acomoda a la derecha mi menu*/
      text-decoration: none;
+     font-weight: bold;
  }
- 
+
  .nav-link {
      font-size: 1.3vw;
      outline: none;
@@ -41,29 +68,46 @@
      /*margin-top. dicta la distancia que tiene arriba*/
      text-decoration: none;
      /*text-decoration: none. Quita el subrayado del enlace*/
+     transition: transform 0.5s ease;/*ease hace que cuando escale con el hover sea suave*/
  }
- 
+
  #menuc1 a.nav-link:hover {
      font-weight: bold;
      /* font-weight: bold. Hace la letra mas negrita*/
      outline: none;
      /* outline:none. Elimina el contorno alrededor de un elemento*/
-     color: #f9f2f2;
+     color: #000000;
      /* Cambia el color cuando el mouse está sobre el enlace por el hover*/
-     transform: scale(1);
+     transform: scale(1.1);
+    
  }
- 
+
  #botonregistrar {
-     color: #CCC;
-     font-weight: bold;
+     line-height: 4vh;
+     border: 1px solid #ffffff;/*grosor del borde del boton*/
+    font-size: 1.3vw;
+    text-decoration: none;
+     color: #ffffff;
      background-color: #c5370c;
      /*hace que elfondo tenga un degradado circular*/
      border-radius: 26px;
      margin-bottom: 200px;
      /*margin-BOTON. dicta la distancia que tiene EL BOTON CON LOS ELEMENTOS QUE TIENE ALREDEDOR*/
- }
+     margin-top: 2.2vw;
+     width: 7vw;
+     position: absolute;
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+     transition: transform 0.5s ease;  /*ease hace que cuando escale con el hover sea suave*/
+    }
+    
+    #botonregistrar:hover {
+      transform: scale(1.1); /* Escala el botón al 110% del tamaño original */
+    }
+   
  /*Estilos para el eslogan y su difuminado */
- 
+
  #bienvenida {
      height: 80vh;
      background-color: #ffffff94;
@@ -78,7 +122,7 @@
      justify-content: center;
      /* display y justify content acomodan los hijos del cuadro bienvenida AL CENTRO CON CENRTER*/
  }
- 
+
  #eslogan {
      margin-top: 1vh;
      /*margin top hace que tenga un espacio arriba del cuadro blanco transparente del centro*/
@@ -90,42 +134,48 @@
      font-weight: bold;
      /*font weight bol pone negritas las letras*/
  }
- /*Estilos para el boton de entrar */
  
+
+
+ /*Estilos para el boton de entrar */
+
  #boton1 {
      text-align: center;
      margin-top: -25vh;
  }
- 
+
  #entraya {
+    font-weight: bold;
      background-color: #c5370c;
      /*hace que elfondo tenga un degradado circular*/
-     border: 2px solid #CCC;
+     border: 1px solid #ffffff;/*grosor del borde del boton*/
      height: 9vh;
      width: 14vw;
-     font-size: 3vw;
+     font-size: 2vw;
      border-radius: 24px;
      margin-top: 10vh;
      color: rgb(255, 255, 255);
-     transition: background-color 0.3s ease;
      line-height: 7vh;
      /*centra la letra del boton en medio del cuadrito*/
+     transition: background-color 0.3s ease;
+     transition: transform 0.5s ease;  /*ease hace que cuando escale con el hover sea suave*/
  }
- 
+
  #entraya:hover {
      color: #ffffff;
      transform: scale(1.1);
-     font-weight: bold;
+     
  }
+
  /*Estilos para el login */
- 
+
  #contenedorlogin {
      display: flex;
      justify-content: center;
      align-items: center;
      text-align: center;
  }
- 
+
  #login {
      display: flex;
      justify-content: center;
@@ -135,27 +185,27 @@
      width: 25vw;
      height: 70vh;
      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-     background-color: #ffffffc6;
+     background-color: #ffffffef;
  }
- 
+
  #datos {
      border-radius: 5px;
      font-size: 1.2rem;
-     margin-top: -30vh;
+     margin-top: -45vh;
  }
- 
+
  #titulois {
      font-weight: bold;
      /*pone en negrita la letra*/
      font-size: 2vw;
-     margin-bottom: 90px;
+     margin-bottom: 30px;
  }
- 
+
  .form-group {
      margin-bottom: 30px;
      /* botton dicta el espacio de separado que tiene de los elementos que tiene alrededor*/
  }
- 
+
  .inputis {
      height: 4vh;
      width: 18vw;
@@ -167,8 +217,9 @@
      /*ajusta el grosor del borde del input*/
      border-radius: 8px;
      font-size: 1.2vw;
+     margin-bottom: -20px;
  }
- 
+
  #labelcontra {
      position: relative;
      right: 5.7vw;
@@ -177,8 +228,9 @@
      font-weight: bold;
      /*pone en negrita la letra*/
      font-size: 1.2vw;
+     margin-bottom: -20px;
  }
- 
+
  #labelregistro {
      position: relative;
      right: 7vw;
@@ -187,8 +239,9 @@
      font-weight: bold;
      /*pone en negrita la letra*/
      font-size: 1.2vw;
+     margin-bottom: -20px;
  }
- 
+
  #iniciarsesion {
      background-color: #c5370c;
      /*hace que el fondo tenga un color degradado a la derecha*/
@@ -210,29 +263,85 @@
      color: #ffffff;
      font-size: 1vw;
  }
- 
+
  #fondoregistrar {
-     background: radial-gradient(circle, #ff000085, #ff8c009f);
+    background-image: url(../img/fondoleche.jpg);
      /*hace que elfondo tenga un degradado circular*/
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center;
      height: 100vh;
  }
- 
+
  #imagenusuariologin {
      width: 13vw;
      height: 25vh;
-     margin-top: -8vh;
-     margin-bottom: 5vh;
+     margin-top: 10vh;
+
  }
- 
+
  #infocontra {
-     margin-top: 60px;
+     margin-top: 7vh;
      /*pone en negrita la letra*/
      font-size: 1.2vw;
  }
+
+ /*Estilos de regitrarse*/
  
+ #registrarse2 {
+     background-color: #c5370c;
+     /*hace que el fondo tenga un color degradado a la derecha*/
+     border: 1px solid #ccc;
+     /* tamaño del grosor borde del boton  */
+     border-radius: 15px;
+     position: absolute;
+     /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
+     top: 75vh;
+     /*dicta que se separe de su techo padre 70%*/
+     left: 50%;
+     /*se aleja de la izquierda a la mitad*/
+     transform: translate(-50%, -50%);
+     /*lo traslada completamente al centro pero es necesario el left y el top*/
+     font-weight: bold;
+     /*pone en negrita la letra*/
+     padding: 10px 20px;
+     margin: 5px;
+     color: #ffffff;
+     font-size: 1vw;
+ }
+
+ /*Estilos para el inicio*/
+ 
+ #barrainicio{
+    height: 16vh;
+    width: 100vw;
+    /*vw, ancho de pantalla*/
+    position: fixed;
+   /* background-color:#a40b54;*/
+   background-color:#ffffffa8;
+ 
+    
+   
+ }
+ #fondocinicio{
+    background-image: url(../img/fondocolores.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    height: 100vh;
+    
+   
+ }
+ #difuminadoinicio{
+   
+    height: 100vh;
+ }
+ #imagenes{
+    width: 100%;
+    overflow: hidden;/*el overflow corta la imagen en caso que este mas larga que el contenedor*/
+    white-space: nowrap;/*white-space: nowrap hace que tengan un espacio entre la ultima imagen a lado de la penultima*/
+ }
  .imgcarrusel {
      width: 22vw;
      height: 40vh;
@@ -243,11 +352,58 @@
      transition: transform 0.6s ease;
      /* Agregar una transición suave */
  }
- 
+#tituloi{
+    position: fixed;
+   
+    margin-left: auto;
+    margin-right: auto;
+    top: 20vh;
+   
+}
+#preguntainicio{
+    
+font-size: 5vw;
+}
+@keyframes animar{
+    0%{
+        opacity: 0;
+    }
+    
+    
+    100%{
+        opacity: 1;
+    }
+
+}
+#preguntainicio{
+    animation: animar 2s backwards;
+  
+}
+
  .imgcarrusel:hover {
      transform: scale(1.2);
  }
- 
- h4 {
-     margin-top: 90px;
- }
+
+ @keyframes desplazar{
+/*keyframes: es una regla que manda instrucciones en el periodo de la animacion*/
+/*se agrega un nombre a la animacion en este caso mover*/  
+/*y adentro de nuestra regla van todas las animaciones que deceamos que tenga pero sucesivamente*/  
+
+   
+    
+    50%{
+        opacity: 1;
+        transform: translateY(0px);/* lo regresa al centro */
+    }
+    75%{
+        opacity: 0.5;
+        transform: translateY(-20px);/* lo desplaza hacia abajo */
+    }
+    100% {
+        
+        transform: translateX(-300%); /* lo desplaza a la derecha */
+    }
+}
+#imagenes img {
+    animation:desplazar 5s alternate-reverse /* con alternate-reverse  comienza la animacion en el último paso y se mueve hacia atrás, luego hacia adelante por eso empieza con el 100%*/
+}

@@ -17,6 +17,7 @@
 
 
   <div class="container-fluid" id="fondoregistrar">
+    
     <div class="row" id="contenedorlogin">
       <section id="login">
         <form id="datos">
@@ -34,7 +35,7 @@
             <br>
             <input class="inputis" type="password" placeholder="Contraseña">
           </div>
-          <button type="submit" id="iniciarsesion">registrarse</button>
+          <button type="submit" id="registrarse2">registrarse</button>
 
           <div class="row">
            

@@ -17,6 +17,17 @@
 
 
   <div class="container-fluid" id="fondoregistrar">
+  <div class="row" id="barrac1">
+      <div class="col">
+        <img src="img/logosfs.png" alt="" id="logo">
+        </div>
+        
+        <div class="col">
+        <nav class="nav navbar-expand-lg" id="menuc1">
+        <a class="nav-link" href="../index.php">Regresar</a>
+        </nav>
+      </div>
+    </div>
     <div class="row" id="contenedorlogin">
       <section id="login">
         <form id="datos">
@@ -46,8 +57,10 @@
               <a href="">Recuperar contraseña</a>
             </div>
           </div>
-          <button type="submit" id="iniciarsesion">Iniciar sesión</button>
-
+          <a href="./inicio.php" >
+        <button class="boton" id="iniciarsesion">Iniciar sesion</button>
+      </a>
+          
         </form>
       </section>
     </div>

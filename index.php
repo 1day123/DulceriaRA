@@ -22,11 +22,11 @@
         
         <div class="col">
         <nav class="nav navbar-expand-lg" id="menuc1">
-          <a class="nav-link" href="#">Lo mas comprado</a>
+          <a class="nav-link" href="Cliente/inicio.php">Inicio</a>
           <a class="nav-link" href="#">Categoriasa</a>
           <a class="nav-link" href="#">Mis compras</a>
           <a class="nav-link" href="#">Buscar</a>
-          <a class="nav-link" href="Cliente/iniciarsesion.php" id="botonregistrar">Registrar</a>
+          <a  href="Cliente/iniciarsesion.php" id="botonregistrar">Registrar</a>
         </nav>
       </div>
     </div>
@@ -36,7 +36,7 @@
       </div>
       <section id="boton1">
       <a href="Cliente/iniciarsesion.php" >
-        <button class="boton" id="entraya">Comprar</button>
+        <button class="boton" id="entraya">Compra Ya!</button>
       </a>
         </section>
     </section>
