@@ -26,7 +26,7 @@
           <a class="nav-link" href="#">Categoriasa</a>
           <a class="nav-link" href="#">Mis compras</a>
           <a class="nav-link" href="#">Buscar</a>
-          <a  href="Cliente/iniciarsesion.php" id="botonregistrar">Registrar</a>
+          <a  href="Cliente/registrarse.php" id="botonregistrar">Registrar</a>
         </nav>
       </div>
     </div>

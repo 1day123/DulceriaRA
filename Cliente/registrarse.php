@@ -17,13 +17,23 @@
 
 
   <div class="container-fluid" id="fondoregistrar">
-    
+  <div class="row" id="barrac1">
+      <div class="col">
+        <img src="img/logosfs.png" alt="" id="logo">
+        </div>
+        
+        <div class="col">
+        <nav class="nav navbar-expand-lg" id="menuc1">
+        <a class="nav-link" href="../index.php">Regresar</a>
+        </nav>
+      </div>
+    </div>
     <div class="row" id="contenedorlogin">
       <section id="login">
         <form id="datos">
           <img src="img/usuario.png" alt="" id="imagenusuariologin">
           <div class="form-group">
-            <h1>Registrarse</h1>
+          <h1 id="titulois">Registrarse</h1>
             <label for="" id="labelregistro">Correo</label>
             <br>
             <input class="inputis" type="text" placeholder="Correo">
@@ -35,7 +45,7 @@
             <br>
             <input class="inputis" type="password" placeholder="Contraseña">
           </div>
-          <button type="submit" id="registrarse2">registrarse</button>
+          <button type="submit" id="registrarse2">Registrarse</button>
 
           <div class="row">
            

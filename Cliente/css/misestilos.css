@@ -28,16 +28,14 @@
        
         
    
-      50% {
-        transform: rotate(360deg) translateY(10px); /* Mitad: rotación completa y traslación hacia abajo */
-      }
+     
       100% {
-        transform: rotate(-720deg) translateY(0); /* Final: rotación doble y traslación de regreso */
+        transform: rotate(320deg) translateY(0); /* Final: rotación doble y traslación de regreso */
       }
       
     }
     #logo{
-        animation:desplazarlogo 2s ease-in  /* con alternate-reverse  comienza la animacion en el último paso y se mueve hacia atrás, luego hacia adelante por eso empieza con el 100%*/
+        animation:desplazarlogo 0.5s ease-in  /* con alternate-reverse  comienza la animacion en el último paso y se mueve hacia atrás, luego hacia adelante por eso empieza con el 100%*/
     }
  
 
@@ -337,24 +335,28 @@
    
     height: 100vh;
  }
+ /*
+estos estilos son de la primera forma de carusel
+
+
  #imagenes{
     width: 100%;
-    overflow: hidden;/*el overflow corta la imagen en caso que este mas larga que el contenedor*/
-    white-space: nowrap;/*white-space: nowrap hace que tengan un espacio entre la ultima imagen a lado de la penultima*/
+    overflow: hidden;/*el overflow corta la imagen en caso que este mas larga que el contenedor
+   white-space: nowrap;/*white-space: nowrap hace que tengan un espacio entre la ultima imagen a lado de la penultima
  }
  .imgcarrusel {
-     width: 22vw;
-     height: 40vh;
+     width: 17vw;
+     height: 25vh;
      margin-bottom: 20px;
-     margin-right: 25px;
-     margin-left: 25px;
+     margin-right: 12px;
+     margin-left: 12px;
      margin-top: 40vh;
      transition: transform 0.6s ease;
-     /* Agregar una transición suave */
+     /* Agregar una transición suave 
  }
+ */
 #tituloi{
     position: fixed;
-   
     margin-left: auto;
     margin-right: auto;
     top: 20vh;
@@ -364,6 +366,7 @@
     
 font-size: 5vw;
 }
+/*animacion de la pregunta de inicio*/
 @keyframes animar{
     0%{
         opacity: 0;
@@ -380,30 +383,57 @@ font-size: 5vw;
   
 }
 
- .imgcarrusel:hover {
-     transform: scale(1.2);
- }
+ 
 
- @keyframes desplazar{
-/*keyframes: es una regla que manda instrucciones en el periodo de la animacion*/
-/*se agrega un nombre a la animacion en este caso mover*/  
-/*y adentro de nuestra regla van todas las animaciones que deceamos que tenga pero sucesivamente*/  
 
+/*cartas de las imagenes*/
+.carta1{
+    position: relative;
+    text-align: center;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    background-color: #ffffffef;
+    width: 17.3vw;
+    height: 40vh;
+    margin-top: 35vh;
+    margin-left: 2vw;   
+    border-radius: 2px;
    
+    overflow: hidden;/*el overflow corta la imagen en caso que este mas larga que el contenedor*/
+    white-space: nowrap;/*white-space: nowrap hace que tengan un espacio entre la ultima imagen a lado de la penultima*/
+ 
+   transition:  transform 0.3s ease;
+    /*ease Agregar una transición suave */
+}
+.carta1:hover {
+    transform: scale(1.2);
+}
+#imgcard{
+    width: 14vw;
+    height: 25vh;
+    margin-bottom: 20px;
+    margin-top: 3vh;
+}
+
+@keyframes desplazar{
+    /*keyframes: es una regla que manda instrucciones en el periodo de la animacion*/
+    /*se agrega un nombre a la animacion en este caso mover*/  
+    /*y adentro de nuestra regla van todas las animaciones que deceamos que tenga pero sucesivamente*/  
     
-    50%{
-        opacity: 1;
-        transform: translateY(0px);/* lo regresa al centro */
-    }
-    75%{
-        opacity: 0.5;
-        transform: translateY(-20px);/* lo desplaza hacia abajo */
-    }
-    100% {
+       
         
-        transform: translateX(-300%); /* lo desplaza a la derecha */
+        50%{
+            opacity: 1;
+            transform: translateY(0px);/* lo regresa al centro */
+        }
+        75%{
+            opacity: 0.5;
+            transform: translateY(-20px);/* lo desplaza hacia abajo */
+        }
+        100% {
+            
+            transform: translateX(-300%); /* lo desplaza a la derecha */
+        }
     }
-}
-#imagenes img {
-    animation:desplazar 5s alternate-reverse /* con alternate-reverse  comienza la animacion en el último paso y se mueve hacia atrás, luego hacia adelante por eso empieza con el 100%*/
-}
+   .carta1 {
+        animation:desplazar 5s alternate-reverse /* con alternate-reverse  comienza la animacion en el último paso y se mueve hacia atrás, luego hacia adelante por eso empieza con el 100%*/
+    }

@@ -38,12 +38,42 @@
 
     </div>
     <div class="row">
+        
+    <!-- 
         <section id="imagenes">
-            <img src="img/cocadas.jpg" alt="" class="imgcarrusel">
-            <img src="img/macarrones.jpg" alt="" class="imgcarrusel">
-            <img src="img/galletasc.jpg" alt="" class="imgcarrusel">
-            <img src="img/borrachos.jpg" alt="" class="imgcarrusel">
-        </section>
+                <img src="img/cocadas.jpg" alt="" class="imgcarrusel">
+                <img src="img/macarrones.jpg" alt="" class="imgcarrusel">
+                <img src="img/galletasc.jpg" alt="" class="imgcarrusel">
+                <img src="img/borrachos.jpg" alt="" class="imgcarrusel">
+                <img src="img/galletasc.jpg" alt="" class="imgcarrusel">
+                <img src="img/borrachos.jpg" alt="" class="imgcarrusel">
+         </section>
+     -->
+  
+
+        <div class="carta1">
+        <img src="img/dulcedefruta.jpg" alt="" id="imgcard">
+        <h5>Dulces de frutas</h5>
+        </div>
+        <div class="carta1">
+        <img src="img/dulce de leche.jpg" alt="" id="imgcard">
+        <h5>Dulces de leche</h5>
+        </div>
+        <div class="carta1">
+        <img src="img/nuecesysemillas.jpg" alt="" id="imgcard">
+        <h5>Dulces de nueces y semillas</h5>
+        </div>
+        <div class="carta1">
+        <img src="img/picosito.jpg" alt="" id="imgcard">
+        <h5>Picosito</h5>
+        </div>
+        <div class="carta1">
+        <img src="img/Dulcesconvento.jpg" alt="" id="imgcard">
+        <h5>Dulces de convento</h5>
+        </div>
+    
+
+
 
     </div>
 
