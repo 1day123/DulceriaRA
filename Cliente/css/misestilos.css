@@ -2,8 +2,8 @@
 
  #fondoc1 {
 
-    background-image: url(../img/fondograsnillo.jpg);
-   
+     background-image: url(../img/fondograsnillo.jpg);
+
      /*hace que elfondo tenga un degradado circular*/
      background-repeat: no-repeat;
      /* no-repeat. Hace que la imagen de fondo no se repita en caso de que no llene toda la pantalla*/
@@ -12,32 +12,37 @@
      height: 100vh;
      /*vh, es alto de pantalla*/
  }
- 
- 
+
+
 
 
 
  #logo {
      height: 20vh;
+
  }
- @keyframes desplazarlogo{
-    /*keyframes: es una regla que manda instrucciones en el periodo de la animacion*/
-    /*se agrega un nombre a la animacion en este caso mover*/  
-    /*y adentro de nuestra regla van todas las animaciones que deceamos que tenga pero sucesivamente*/  
-    
-       
-        
-   
-     
-      100% {
-        transform: rotate(320deg) translateY(0); /* Final: rotación doble y traslación de regreso */
-      }
-      
-    }
-    #logo{
-        animation:desplazarlogo 0.5s ease-in  /* con alternate-reverse  comienza la animacion en el último paso y se mueve hacia atrás, luego hacia adelante por eso empieza con el 100%*/
-    }
- 
+
+ @keyframes desplazarlogo {
+     /*keyframes: es una regla que manda instrucciones en el periodo de la animacion*/
+     /*se agrega un nombre a la animacion en este caso mover*/
+     /*y adentro de nuestra regla van todas las animaciones que deceamos que tenga pero sucesivamente*/
+
+
+
+
+
+     100% {
+         transform: rotate(320deg) translateY(0);
+         /* Final: rotación doble y traslación de regreso */
+     }
+
+ }
+
+ #logo {
+     animation: desplazarlogo 0.5s ease-in
+         /* con alternate-reverse  comienza la animacion en el último paso y se mueve hacia atrás, luego hacia adelante por eso empieza con el 100%*/
+ }
+
 
  #barrac1 {
      height: 10vh;
@@ -47,6 +52,7 @@
  }
 
  #menuc1 {
+
      font-size: 1rem;
      /*fon-size. Dicta el tamño de letra*/
      justify-content: flex-end;
@@ -61,12 +67,13 @@
      border: none;
      text-decoration: none;
      list-style-type: none;
-     color: rgb(0, 0, 0);
+     color: #000000;
      margin-top: 2.5vh;
      /*margin-top. dicta la distancia que tiene arriba*/
      text-decoration: none;
      /*text-decoration: none. Quita el subrayado del enlace*/
-     transition: transform 0.5s ease;/*ease hace que cuando escale con el hover sea suave*/
+     transition: transform 0.5s ease;
+     /*ease hace que cuando escale con el hover sea suave*/
  }
 
  #menuc1 a.nav-link:hover {
@@ -75,35 +82,35 @@
      outline: none;
      /* outline:none. Elimina el contorno alrededor de un elemento*/
      color: #000000;
-     /* Cambia el color cuando el mouse está sobre el enlace por el hover*/
      transform: scale(1.1);
-    
+
  }
 
  #botonregistrar {
-     line-height: 4vh;
-     border: 1px solid #ffffff;/*grosor del borde del boton*/
-    font-size: 1.3vw;
-    text-decoration: none;
-     color: #ffffff;
+    display: flex;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+     border: 1px solid #ffffff;
+     /*grosor del borde del boton*/
+     font-size: 1.3vw;
+     text-decoration: none;
      background-color: #c5370c;
      /*hace que elfondo tenga un degradado circular*/
      border-radius: 26px;
-     margin-bottom: 200px;
-     /*margin-BOTON. dicta la distancia que tiene EL BOTON CON LOS ELEMENTOS QUE TIENE ALREDEDOR*/
-     margin-top: 2.2vw;
      width: 7vw;
-     position: absolute;
-     text-align: center;
-     align-items: center;
-     justify-content: center;
-     transition: transform 0.5s ease;  /*ease hace que cuando escale con el hover sea suave*/
-    }
-    
-    #botonregistrar:hover {
-      transform: scale(1.1); /* Escala el botón al 110% del tamaño original */
-    }
-   
+     transition: transform 0.5s ease ;
+
+ }
+ #botonregistrar:hover{
+     color: #ffffff;
+   background-color: #ffffff;
+   border: 2px solid #db0909;
+
+ }
+
+ 
+
  /*Estilos para el eslogan y su difuminado */
 
  #bienvenida {
@@ -132,7 +139,7 @@
      font-weight: bold;
      /*font weight bol pone negritas las letras*/
  }
- 
+
 
 
  /*Estilos para el boton de entrar */
@@ -143,10 +150,11 @@
  }
 
  #entraya {
-    font-weight: bold;
+     font-weight: bold;
      background-color: #c5370c;
      /*hace que elfondo tenga un degradado circular*/
-     border: 1px solid #ffffff;/*grosor del borde del boton*/
+     border: 1px solid #ffffff;
+     /*grosor del borde del boton*/
      height: 9vh;
      width: 14vw;
      font-size: 2vw;
@@ -156,13 +164,14 @@
      line-height: 7vh;
      /*centra la letra del boton en medio del cuadrito*/
      transition: background-color 0.3s ease;
-     transition: transform 0.5s ease;  /*ease hace que cuando escale con el hover sea suave*/
+     transition: transform 0.5s ease;
+     /*ease hace que cuando escale con el hover sea suave*/
  }
 
  #entraya:hover {
      color: #ffffff;
      transform: scale(1.1);
-     
+
  }
 
  /*Estilos para el login */
@@ -263,7 +272,7 @@
  }
 
  #fondoregistrar {
-    background-image: url(../img/fondoleche.jpg);
+     background-image: url(../img/fondoleche.jpg);
      /*hace que elfondo tenga un degradado circular*/
      background-size: cover;
      background-repeat: no-repeat;
@@ -285,7 +294,7 @@
  }
 
  /*Estilos de regitrarse*/
- 
+
  #registrarse2 {
      background-color: #c5370c;
      /*hace que el fondo tenga un color degradado a la derecha*/
@@ -309,32 +318,38 @@
  }
 
  /*Estilos para el inicio*/
- 
- #barrainicio{
-    height: 16vh;
-    width: 100vw;
-    /*vw, ancho de pantalla*/
-    position: fixed;
-   /* background-color:#a40b54;*/
-   background-color:#ffffffa8;
- 
-    
-   
+
+ #barrainicio {
+     display: flex;
+     flex-wrap: nowrap;
+     /*flex-wrap: nowrap junto display: flex : hace que los elementos se mantengan alineados uno a lado del otro en diferente resolucion*/
+     height: 16vh;
+     width: 100vw;
+     /*vw, ancho de pantalla*/
+     position: fixed;
+     /* background-color:#a40b54;*/
+     background-color: #ffffffa8;
+
+
+
  }
- #fondocinicio{
-    background-image: url(../img/fondocolores.jpeg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    
-    height: 100vh;
-    
-   
+
+ #fondocinicio {
+     background-image: url(../img/fondocolores.jpeg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+
+     height: 100vh;
+
+
  }
- #difuminadoinicio{
-   
-    height: 100vh;
+
+ #difuminadoinicio {
+
+     height: 100vh;
  }
+
  /*
 estos estilos son de la primera forma de carusel
 
@@ -355,85 +370,109 @@ estos estilos son de la primera forma de carusel
      /* Agregar una transición suave 
  }
  */
-#tituloi{
-    position: fixed;
-    margin-left: auto;
-    margin-right: auto;
-    top: 20vh;
-   
-}
-#preguntainicio{
-    
-font-size: 5vw;
-}
-/*animacion de la pregunta de inicio*/
-@keyframes animar{
-    0%{
-        opacity: 0;
-    }
-    
-    
-    100%{
-        opacity: 1;
-    }
+ #tituloi {
+     position: fixed;
+     margin-left: auto;
+     margin-right: auto;
+     top: 20vh;
 
-}
-#preguntainicio{
-    animation: animar 2s backwards;
-  
-}
+ }
 
- 
+ #preguntainicio {
+
+     font-size: 5vw;
+ }
+
+ /*animacion de la pregunta de inicio*/
+ @keyframes animar {
+     0% {
+         opacity: 0;
+     }
 
 
-/*cartas de las imagenes*/
-.carta1{
-    position: relative;
-    text-align: center;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-    background-color: #ffffffef;
-    width: 17.3vw;
-    height: 40vh;
-    margin-top: 35vh;
-    margin-left: 2vw;   
-    border-radius: 2px;
-   
-    overflow: hidden;/*el overflow corta la imagen en caso que este mas larga que el contenedor*/
-    white-space: nowrap;/*white-space: nowrap hace que tengan un espacio entre la ultima imagen a lado de la penultima*/
- 
-   transition:  transform 0.3s ease;
-    /*ease Agregar una transición suave */
-}
-.carta1:hover {
-    transform: scale(1.2);
-}
-#imgcard{
-    width: 14vw;
-    height: 25vh;
-    margin-bottom: 20px;
-    margin-top: 3vh;
-}
+     100% {
+         opacity: 1;
+     }
 
-@keyframes desplazar{
-    /*keyframes: es una regla que manda instrucciones en el periodo de la animacion*/
-    /*se agrega un nombre a la animacion en este caso mover*/  
-    /*y adentro de nuestra regla van todas las animaciones que deceamos que tenga pero sucesivamente*/  
-    
-       
-        
-        50%{
-            opacity: 1;
-            transform: translateY(0px);/* lo regresa al centro */
-        }
-        75%{
-            opacity: 0.5;
-            transform: translateY(-20px);/* lo desplaza hacia abajo */
-        }
-        100% {
-            
-            transform: translateX(-300%); /* lo desplaza a la derecha */
-        }
-    }
-   .carta1 {
-        animation:desplazar 5s alternate-reverse /* con alternate-reverse  comienza la animacion en el último paso y se mueve hacia atrás, luego hacia adelante por eso empieza con el 100%*/
-    }
+ }
+
+ #preguntainicio {
+     animation: animar 2s backwards;
+
+ }
+
+
+
+
+
+ /*cartas de las imagenes*/
+ .container-flex {
+     display: flex;
+     flex-wrap: nowrap;
+ }
+
+ .menucards {
+     display: flex;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+ }
+
+ .carta1 {
+     display: block;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     background-color: #ffffffef;
+     width: 17.3vw;
+     height: 40vh;
+     margin-top: 35vh;
+     margin-left: 2vw;
+     border-radius: 2px;
+
+     transition: transform 0.3s ease;
+     /*ease Agregar una transición suave */
+ }
+
+ .carta1:hover {
+     transform: scale(1.2);
+
+ }
+
+ #imgcard {
+     width: 14vw;
+     height: 25vh;
+     margin-bottom: 20px;
+     margin-top: 3vh;
+ }
+
+ @keyframes desplazar {
+     /*keyframes: es una regla que manda instrucciones en el periodo de la animacion*/
+     /*se agrega un nombre a la animacion en este caso mover*/
+     /*y adentro de nuestra regla van todas las animaciones que deceamos que tenga pero sucesivamente*/
+
+
+
+     50% {
+         opacity: 1;
+         transform: translateY(0px);
+         /* lo regresa al centro */
+     }
+
+     75% {
+         opacity: 0.5;
+         transform: translateY(-20px);
+         /* lo desplaza hacia abajo */
+     }
+
+     100% {
+
+         transform: translateX(-300%);
+         /* lo desplaza a la derecha */
+     }
+ }
+
+ .carta1 {
+     animation: desplazar 5s alternate-reverse
+         /* con alternate-reverse  comienza la animacion en el último paso y se mueve hacia atrás, luego hacia adelante por eso empieza con el 100%*/
+ }

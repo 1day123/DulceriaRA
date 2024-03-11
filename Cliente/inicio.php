@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="container-fluid" id="fondocinicio">
+    <div class="container-flex" id="fondocinicio">
         <div class="row" id="barrainicio">
             <div class="col">
                 <img src="img/logosfs.png" alt="" id="logo">
@@ -24,7 +24,7 @@
             <div class="col">
                 <nav class="nav navbar-expand-lg" id="menuc1">
                     <a class="nav-link" href="#">Inicio</a>
-                    <a class="nav-link" href="#">Categoriasa</a>
+                    <a class="nav-link" href="#">Categorias</a>
                     <a class="nav-link" href="#">Mis compras</a>
                     <a class="nav-link" href="#">Buscar</a>
                     <a class="nav-link" href="../index.php">Salir</a>
@@ -40,6 +40,7 @@
     <div class="row">
         
     <!-- 
+        ---------------------------primer intento----
         <section id="imagenes">
                 <img src="img/cocadas.jpg" alt="" class="imgcarrusel">
                 <img src="img/macarrones.jpg" alt="" class="imgcarrusel">
@@ -48,30 +49,39 @@
                 <img src="img/galletasc.jpg" alt="" class="imgcarrusel">
                 <img src="img/borrachos.jpg" alt="" class="imgcarrusel">
          </section>
-     -->
+         -----------------------segundo intento------------------------------------
+        -->
   
+<section class="menucards">
 
-        <div class="carta1">
-        <img src="img/dulcedefruta.jpg" alt="" id="imgcard">
-        <h5>Dulces de frutas</h5>
-        </div>
-        <div class="carta1">
-        <img src="img/dulce de leche.jpg" alt="" id="imgcard">
-        <h5>Dulces de leche</h5>
-        </div>
-        <div class="carta1">
-        <img src="img/nuecesysemillas.jpg" alt="" id="imgcard">
-        <h5>Dulces de nueces y semillas</h5>
-        </div>
-        <div class="carta1">
-        <img src="img/picosito.jpg" alt="" id="imgcard">
-        <h5>Picosito</h5>
-        </div>
-        <div class="carta1">
-        <img src="img/Dulcesconvento.jpg" alt="" id="imgcard">
-        <h5>Dulces de convento</h5>
-        </div>
-    
+    <div class="carta1" >
+      <img src="img/dulcedefruta.jpg" alt=""  id="imgcard">
+       <h5 id="tituloscards">Dulces de frutas</h5>
+       </div>
+       <div class="carta1">
+       <img src="img/dulce de leche.jpg" alt="" class="card2" id="imgcard">
+       <h5 id="tituloscards">Dulces de leche</h5>
+       </div>
+       <div class="carta1">
+       <img src="img/nuecesysemillas.jpg" alt="" class="card3" id="imgcard">
+       <h5 id="tituloscards">Dulces de nueces y semillas</h5>
+       </div>
+       <div class="carta1">
+       <img src="img/picosito.jpg" alt="" class="card4" id="imgcard">
+       <h5 id="tituloscards">Picosito</h5>
+       </div>
+       <div class="carta1">
+       <img src="img/Dulcesconvento.jpg" alt=""class="card5" id="imgcard">
+       <h5 id="tituloscards">Dulces de convento</h5>
+       </div>
+   
+
+</section>
+
+
+
+
+
 
 
 

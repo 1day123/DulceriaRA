@@ -18,27 +18,29 @@
     <div class="row" id="barrac1">
       <div class="col">
         <img src="Cliente/img/logosfs.png" alt="" id="logo">
-        </div>
-        
-        <div class="col">
+      </div>
+
+      <div class="col">
         <nav class="nav navbar-expand-lg" id="menuc1">
           <a class="nav-link" href="Cliente/inicio.php">Inicio</a>
-          <a class="nav-link" href="#">Categoriasa</a>
+          <a class="nav-link" href="#">Categorias</a>
           <a class="nav-link" href="#">Mis compras</a>
           <a class="nav-link" href="#">Buscar</a>
-          <a  href="Cliente/registrarse.php" id="botonregistrar">Registrar</a>
+          <a class="nav-link" href="Cliente/registrarse.php" id="botonregistrar">Registrar</a>
         </nav>
+
       </div>
+      
     </div>
     <div class="row" id="barra2c1">
       <section id="bienvenida">
         <h1 id="eslogan">"Descubre la magia de Puebla en cada dulce: ¡tradición en cada mordisco!"</h1>
-      </div>
-      <section id="boton1">
-      <a href="Cliente/iniciarsesion.php" >
+    </div>
+    <section id="boton1">
+      <a href="Cliente/iniciarsesion.php">
         <button class="boton" id="entraya">Compra Ya!</button>
       </a>
-        </section>
+    </section>
     </section>
 
 
