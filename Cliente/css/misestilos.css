@@ -102,13 +102,7 @@
      transition: transform 0.5s ease ;
 
  }
- #botonregistrar:hover{
-     color: #ffffff;
-   background-color: #ffffff;
-   border: 2px solid #db0909;
-
- }
-
+ 
  
 
  /*Estilos para el eslogan y su difuminado */
@@ -345,31 +339,9 @@
 
  }
 
- #difuminadoinicio {
-
-     height: 100vh;
- }
-
- /*
-estos estilos son de la primera forma de carusel
 
 
- #imagenes{
-    width: 100%;
-    overflow: hidden;/*el overflow corta la imagen en caso que este mas larga que el contenedor
-   white-space: nowrap;/*white-space: nowrap hace que tengan un espacio entre la ultima imagen a lado de la penultima
- }
- .imgcarrusel {
-     width: 17vw;
-     height: 25vh;
-     margin-bottom: 20px;
-     margin-right: 12px;
-     margin-left: 12px;
-     margin-top: 40vh;
-     transition: transform 0.6s ease;
-     /* Agregar una transición suave 
- }
- */
+ 
  #tituloi {
      position: fixed;
      margin-left: auto;
@@ -475,4 +447,15 @@ estos estilos son de la primera forma de carusel
  .carta1 {
      animation: desplazar 5s alternate-reverse
          /* con alternate-reverse  comienza la animacion en el último paso y se mueve hacia atrás, luego hacia adelante por eso empieza con el 100%*/
+ }
+ /*estilos para primeros dulces de targeta*/
+ #dulce{
+    width: 10vw;
+    height: 10vh;
+    background-color: #000000;
+    margin-top: 10vh;
+ }
+ .opdulces{
+    display: inline-block;
+    gap: 10px
  }

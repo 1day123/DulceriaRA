@@ -26,7 +26,7 @@
           <a class="nav-link" href="#">Categorias</a>
           <a class="nav-link" href="#">Mis compras</a>
           <a class="nav-link" href="#">Buscar</a>
-          <a class="nav-link" href="Cliente/registrarse.php" id="botonregistrar">Registrar</a>
+          <a class="nav-link" href="Cliente/registrarse.php" id="botonregistrar" style="color: aliceblue">Registrar</a>
         </nav>
 
       </div>

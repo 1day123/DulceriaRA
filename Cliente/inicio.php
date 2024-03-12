@@ -39,18 +39,7 @@
     </div>
     <div class="row">
         
-    <!-- 
-        ---------------------------primer intento----
-        <section id="imagenes">
-                <img src="img/cocadas.jpg" alt="" class="imgcarrusel">
-                <img src="img/macarrones.jpg" alt="" class="imgcarrusel">
-                <img src="img/galletasc.jpg" alt="" class="imgcarrusel">
-                <img src="img/borrachos.jpg" alt="" class="imgcarrusel">
-                <img src="img/galletasc.jpg" alt="" class="imgcarrusel">
-                <img src="img/borrachos.jpg" alt="" class="imgcarrusel">
-         </section>
-         -----------------------segundo intento------------------------------------
-        -->
+
   
 <section class="menucards">
 
