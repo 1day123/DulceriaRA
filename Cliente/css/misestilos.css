@@ -312,150 +312,74 @@
  }
 
  /*Estilos para el inicio*/
+/*estilos para las cards*/
+#cajacards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+.cards{
+    margin-top: 25vh;
+    width: 18vw;
+    height: 60vh;
+   
+    
+}
+.titutocars{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: -35vh;
+    position: relative;
+    cursor: pointer;
+   
+}
+.imagen{
+width: 100%;
+height: 100%;
 
- #barrainicio {
-     display: flex;
-     flex-wrap: nowrap;
-     /*flex-wrap: nowrap junto display: flex : hace que los elementos se mantengan alineados uno a lado del otro en diferente resolucion*/
-     height: 16vh;
-     width: 100vw;
-     /*vw, ancho de pantalla*/
-     position: fixed;
-     /* background-color:#a40b54;*/
-     background-color: #ffffffa8;
+}
+#imagen1{
+    background-image: url(../img/dulcedefruta.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.3s ease;
+   
 
+}
+#imagen1:hover{
+    transform: scale(1.1);
+    background-image: url(../img/dulcedefruta.jpg);
+    
+}
+#imagen2{
+    background-image: url(../img/nuecesysemillas.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#imagen3{
+    background-image: url(../img/picosito.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
+}
+#imagen4{
+    background-image: url(../img/dulce\ de\ leche.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
- }
+}
+#imagen5{
+    background-image: url(../img/Dulcesconvento.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
 
- #fondocinicio {
-     background-image: url(../img/fondocolores.jpeg);
-     background-repeat: no-repeat;
-     background-position: center;
-     background-size: cover;
+}
 
-     height: 100vh;
-
-
- }
-
-
-
- 
- #tituloi {
-     position: fixed;
-     margin-left: auto;
-     margin-right: auto;
-     top: 20vh;
-
- }
-
- #preguntainicio {
-
-     font-size: 5vw;
- }
-
- /*animacion de la pregunta de inicio*/
- @keyframes animar {
-     0% {
-         opacity: 0;
-     }
-
-
-     100% {
-         opacity: 1;
-     }
-
- }
-
- #preguntainicio {
-     animation: animar 2s backwards;
-
- }
-
-
-
-
-
- /*cartas de las imagenes*/
- .container-flex {
-     display: flex;
-     flex-wrap: nowrap;
- }
-
- .menucards {
-     display: flex;
-     justify-content: center;
-     text-align: center;
-     align-items: center;
- }
-
- .carta1 {
-     display: block;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-     background-color: #ffffffef;
-     width: 17.3vw;
-     height: 40vh;
-     margin-top: 35vh;
-     margin-left: 2vw;
-     border-radius: 2px;
-
-     transition: transform 0.3s ease;
-     /*ease Agregar una transición suave */
- }
-
- .carta1:hover {
-     transform: scale(1.2);
-
- }
-
- #imgcard {
-     width: 14vw;
-     height: 25vh;
-     margin-bottom: 20px;
-     margin-top: 3vh;
- }
-
- @keyframes desplazar {
-     /*keyframes: es una regla que manda instrucciones en el periodo de la animacion*/
-     /*se agrega un nombre a la animacion en este caso mover*/
-     /*y adentro de nuestra regla van todas las animaciones que deceamos que tenga pero sucesivamente*/
-
-
-
-     50% {
-         opacity: 1;
-         transform: translateY(0px);
-         /* lo regresa al centro */
-     }
-
-     75% {
-         opacity: 0.5;
-         transform: translateY(-20px);
-         /* lo desplaza hacia abajo */
-     }
-
-     100% {
-
-         transform: translateX(-300%);
-         /* lo desplaza a la derecha */
-     }
- }
-
- .carta1 {
-     animation: desplazar 5s alternate-reverse
-         /* con alternate-reverse  comienza la animacion en el último paso y se mueve hacia atrás, luego hacia adelante por eso empieza con el 100%*/
- }
- /*estilos para primeros dulces de targeta*/
- #dulce{
-    width: 10vw;
-    height: 10vh;
-    background-color: #000000;
-    margin-top: 10vh;
- }
- .opdulces{
-    display: inline-block;
-    gap: 10px
- }
