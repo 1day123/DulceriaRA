@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row" id="barrac1">
+    <div class="container-fluid" id="iniciofondo">
+        <div class="row" id="barrac1inicio">
             <div class="col">
                 <img src="img/logosfs.png" alt="" id="logo">
             </div>
@@ -32,26 +32,29 @@
             </div>
 
         </div>
+        <div class="row" id="pregunta">
+            <h6 class="preguntainicio">¿Que deceas comprar?</h6>
+        </div>
         <div class="row" id="cajacards">
-            <div class="cards">
+            <div class="cards" >
                 <div class="imagen" id="imagen1"></div>
                 <h4 class="titutocars">Dulces de fruta</h4>
             </div>
             <div class="cards">
                 <div class="imagen" id="imagen2"></div>
-                <h4></h4>
+                <h4 class="titutocars">Semillas</h4>
             </div>
             <div class="cards">
                 <div class="imagen" id="imagen3"></div>
-                <h4></h4>
+                <h4 class="titutocars">Picosito</h4>
             </div>
             <div class="cards">
                 <div class="imagen" id="imagen4"></div>
-                <h4></h4>
+                <h4 class="titutocars">Dulce de leche</h4>
             </div>
             <div class="cards">
                 <div class="imagen" id="imagen5"></div>
-                <h4></h4>
+                <h4 class="titutocars">Dulces de Convento</h4>
             </div>
         </div>
     </div>
