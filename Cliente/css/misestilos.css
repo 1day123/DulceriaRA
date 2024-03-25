@@ -232,7 +232,7 @@
      margin-bottom: -20px;
  }
 
- #labelregistro {
+ .labelregistro {
      position: relative;
      right: 7vw;
      display: block;

@@ -30,20 +30,34 @@
     </div>
     <div class="row" id="contenedorlogin">
       <section id="login">
-        <form id="datos">
+        <form id="datos" action="../Servidor/RegistrarUsuariosbd.php" method="POST">
           <img src="img/usuario.png" alt="" id="imagenusuariologin">
           <div class="form-group">
           <h1 id="titulois">Registrarse</h1>
-            <label for="" id="labelregistro">Correo</label>
+            <label for="" class="labelregistro">Nombre</label>
             <br>
-            <input class="inputis" type="text" placeholder="Correo">
+            <input class="inputis" name ="nombre" type="text" placeholder="nombre">
+            <br>
+            <label for="" class="labelregistro">Correo</label>
+            <br>
+            <input class="inputis" name ="correo" type="text" placeholder="Correo">
+            <br>
+            <label for="" class="labelregistro">Apellido Paterno</label>
+            <br>
+            <input class="inputis" name="paterno" type="text" placeholder="apellido paterno">
+            <br>
+            <label for="" class="labelregistro">Apellido Materno</label>
+            <br>
+            <input class="inputis" name ="materno" type="text" placeholder="apellido materno">
+
+
 
           </div>
           <div class="form-group">
 
             <label for="" id="labelcontra">Contraseña</label>
             <br>
-            <input class="inputis" type="password" placeholder="Contraseña">
+            <input class="inputis" name ="contraseña" type="password" placeholder="Contraseña">
           </div>
           <button type="submit" id="registrarse2">Registrarse</button>
 
