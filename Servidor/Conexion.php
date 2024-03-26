@@ -13,5 +13,5 @@ if (!$conexion) {
     echo "la conexion fallo" . mysqli_connect_error();
 } else {
 
-    echo "conectada Dayra";
+   // echo "conectada Dayra";
 }

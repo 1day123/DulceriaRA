@@ -30,20 +30,20 @@
     </div>
     <div class="row" id="contenedorlogin">
       <section id="login">
-        <form id="datos">
+        <form id="datos" action="../Servidor/Autenticar.php" method="POST" >
           <img src="img/usuario.png" alt="" id="imagenusuariologin">
           <div class="form-group">
             <h1 id="titulois">Inicia Sesion</h1>
             <label for="" id="labelregistro">Correo</label>
             <br>
-            <input class="inputis" type="text" placeholder="Correo">
+            <input class="inputis" type="text" name ="correo" placeholder="Correo">
 
           </div>
           <div class="form-group">
 
             <label for="" id="labelcontra">Contraseña</label>
             <br>
-            <input class="inputis" type="password" placeholder="Contraseña">
+            <input class="inputis" type="password" name="contraseña" placeholder="Contraseña">
           </div>
           
           <div class="row" id="infocontra">
@@ -58,7 +58,7 @@
             </div>
           </div>
           <a href="./inicio.php" >
-        <button class="boton" id="iniciarsesion">Iniciar sesion</button>
+        <button class="boton" type="submit" id="iniciarsesion">Iniciar sesion</button>
       </a>
           
         </form>
