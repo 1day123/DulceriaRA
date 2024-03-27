@@ -358,6 +358,8 @@ background-color: #ffffffa9;
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
  }
 /*estilos para las cards*/
 #cajacards{
@@ -462,8 +464,8 @@ height: 100%;
     transform: scale(1.1);
     filter: blur(1px);  
 }
-/*scrolee hasta el id que solicitan*/
-html {
-    scroll-behavior: smooth;
-  }
+
+
+   
+  
 /* Para el registro de proveedores */

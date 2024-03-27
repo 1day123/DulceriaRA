@@ -58,6 +58,7 @@
             <label for="" class="labelregistro">Contraseña</label>
             <br>
             <input class="inputis" name ="contraseña" type="password" placeholder="Contraseña">
+            <input class="inputis" value="3" name ="tipo_usuario" type="hidden" placeholder="tipodeusuario">
             <br>
             <button type="submit" id="registrarse2">Registrarse</button>
           </div>
