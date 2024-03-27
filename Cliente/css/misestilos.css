@@ -1,4 +1,4 @@
- /*estilos para el fondo y el menu*/
+ /*estilos para el fondo y el menu del index*/
 
  #fondoc1 {
 
@@ -60,7 +60,7 @@
      text-decoration: none;
      font-weight: bold;
  }
-
+/*seccion de navegacion para todos los modulos */
  .nav-link {
      font-size: 1.3vw;
      outline: none;
@@ -85,7 +85,7 @@
      transform: scale(1.1);
 
  }
-
+/*boton registrar del index */
  #botonregistrar {
     display: flex;
    text-align: center;
@@ -105,7 +105,7 @@
  
  
 
- /*Estilos para el eslogan y su difuminado */
+ /*Estilos para el eslogan y su difuminado del index */
 
  #bienvenida {
      height: 80vh;
@@ -136,7 +136,7 @@
 
 
 
- /*Estilos para el boton de entrar */
+ /*Estilos para el boton de entrar del index*/
 
  #boton1 {
      text-align: center;
@@ -167,16 +167,68 @@
      transform: scale(1.1);
 
  }
+/*Estilos registrar*/
+ #contenedorregistrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/*cuadro de fondo del registro*/
+#registro{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin-top: 20vh;
+   width: 25vw;
+   height: 75vh;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+   background-color: #ffffffef;
+}
+
+/*Estilos de boton regitrarse*/
+
+#registrarse2 {
+    background-color: #c5370c;
+    /*hace que el fondo tenga un color */
+    border: 1px solid #ccc;
+    /* tamaño del grosor borde del boton  */
+    border-radius: 15px;
+    position: absolute;
+    /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
+    top: 90vh;
+    /*dicta que se separe de su techo padre 70%*/
+    left: 50%;
+    /*se aleja de la izquierda a la mitad*/
+    transform: translate(-50%, -50%);
+    /*lo traslada completamente al centro pero es necesario el left y el top*/
+    font-weight: bold;
+    /*pone en negrita la letra*/
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 1vw;
+}
+.labelregistro {
+    position: absolute;
+    display: block;
+    /*los forma en bloque un label en cima del input*/
+    font-weight: bold;
+    /*pone en negrita la letra*/
+    font-size: 1.2vw;/*tamaño de letra del boton*/
+    margin-top: 1vh;
+    
+ }
 
  /*Estilos para el login */
-
+/*posision del cuadro del registro para el login*/
  #contenedorlogin {
      display: flex;
      justify-content: center;
      align-items: center;
      text-align: center;
  }
-
+ /*cuadro del registro para el login*/
  #login {
      display: flex;
      justify-content: center;
@@ -188,81 +240,71 @@
      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
      background-color: #ffffffef;
  }
-
+/*este estilo lo comparte con login y registro*/
  #datos {
      border-radius: 5px;
      font-size: 1.2rem;
      margin-top: -45vh;
  }
-
+/*este estilo lo comparte con login y registro*/
  #titulois {
      font-weight: bold;
      /*pone en negrita la letra*/
      font-size: 2vw;
-     margin-bottom: 30px;
+     margin-bottom: 5px;
  }
-
- .form-group {
-     margin-bottom: 30px;
-     /* botton dicta el espacio de separado que tiene de los elementos que tiene alrededor*/
- }
+/*Estilo para el inicio Sesion*/
+ 
+/*este estilo lo comparte con login y registro*/
 
  .inputis {
      height: 4vh;
      width: 18vw;
      /* ajusta el anclo del input*/
-     padding: 10px;
+     margin-top: 2vh;
      /*le da espacio al elemento de adentro a su alrededor*/
      background-color: #ffffff79;
      border: 1px solid #ccc;
      /*ajusta el grosor del borde del input*/
      border-radius: 8px;
      font-size: 1.2vw;
-     margin-bottom: -20px;
+    
+     
  }
 
- #labelcontra {
-     position: relative;
-     right: 5.7vw;
-     display: block;
-     /*los forma en bloke uno en cima de otro*/
-     font-weight: bold;
-     /*pone en negrita la letra*/
-     font-size: 1.2vw;
-     margin-bottom: -20px;
+ 
+ .labellogin {
+    position: absolute;
+    display: block;
+    /*los forma en bloque un label en cima del input*/
+    font-weight: bold;
+    /*pone en negrita la letra*/
+    font-size: 1.2vw;/*tamaño de letra del boton*/
+    margin-top: 1vh;
+    margin-left: 1.3vw;
+    
  }
-
- .labelregistro {
-     position: relative;
-     right: 7vw;
-     display: block;
-     /*los forma en bloke uno en cima de otro*/
-     font-weight: bold;
-     /*pone en negrita la letra*/
-     font-size: 1.2vw;
-     margin-bottom: -20px;
- }
-
+/*boton para iniciar sesion*/
  #iniciarsesion {
-     background-color: #c5370c;
-     /*hace que el fondo tenga un color degradado a la derecha*/
-     border: 1px solid #ccc;
-     /* tamaño del grosor borde del boton  */
-     border-radius: 15px;
-     position: absolute;
-     /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
-     top: 80vh;
-     /*dicta que se separe de su techo padre 70%*/
-     left: 50%;
-     /*se aleja de la izquierda a la mitad*/
-     transform: translate(-50%, -50%);
-     /*lo traslada completamente al centro pero es necesario el left y el top*/
-     font-weight: bold;
-     /*pone en negrita la letra*/
-     padding: 10px 20px;
-     margin: 5px;
-     color: #ffffff;
-     font-size: 1vw;
+    
+        background-color: #c5370c;
+        /*hace que el fondo tenga un color */
+        border: 1px solid #ccc;
+        /* tamaño del grosor borde del boton  */
+        border-radius: 15px;
+        position: absolute;
+        /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
+        top: 80vh;
+        /*dicta que se separe de su techo padre 70%*/
+        left: 50%;
+        /*se aleja de la izquierda a la mitad*/
+        transform: translate(-50%, -50%);
+        /*lo traslada completamente al centro pero es necesario el left y el top*/
+        font-weight: bold;
+        /*pone en negrita la letra*/
+        padding: 10px 20px;
+        color: #ffffff;
+        font-size: 1vw;
  }
 
  #fondoregistrar {
@@ -277,7 +319,7 @@
  #imagenusuariologin {
      width: 13vw;
      height: 25vh;
-     margin-top: 10vh;
+     margin-top: 15vh;
 
  }
 
@@ -287,31 +329,8 @@
      font-size: 1.2vw;
  }
 
- /*Estilos de regitrarse*/
-
- #registrarse2 {
-     background-color: #c5370c;
-     /*hace que el fondo tenga un color degradado a la derecha*/
-     border: 1px solid #ccc;
-     /* tamaño del grosor borde del boton  */
-     border-radius: 15px;
-     position: absolute;
-     /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
-     top: 75vh;
-     /*dicta que se separe de su techo padre 70%*/
-     left: 50%;
-     /*se aleja de la izquierda a la mitad*/
-     transform: translate(-50%, -50%);
-     /*lo traslada completamente al centro pero es necesario el left y el top*/
-     font-weight: bold;
-     /*pone en negrita la letra*/
-     padding: 10px 20px;
-     margin: 5px;
-     color: #ffffff;
-     font-size: 1vw;
- }
-
- /*Estilos para el inicio*/
+ 
+ /*Estilos para el modulo inicio*/
  #barrac1inicio{
     height: 10vh;
      width: 100vw;
@@ -443,4 +462,8 @@ height: 100%;
     transform: scale(1.1);
     filter: blur(1px);  
 }
-
+/*scrolee hasta el id que solicitan*/
+html {
+    scroll-behavior: smooth;
+  }
+/* Para el registro de proveedores */

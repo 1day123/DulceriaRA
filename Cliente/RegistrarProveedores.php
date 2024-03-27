@@ -10,7 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/misestilos.css">
-  <title>Registrarse</title>
+  <title>RegistrarProveedores</title>
 </head>
 
 <body>
@@ -34,22 +34,26 @@
         <form id="datos" action="../Servidor/RegistrarUsuariosbd.php" method="POST"><!-- formulario para el registro -->
           <img src="img/usuario.png" alt="" id="imagenusuariologin">
           <div class="form-group">
-          <h1 id="titulois">Registrarse</h1>
+          <h1 id="titulois">Registrar Proveedores</h1>
             <label for="" class="labelregistro">Nombre</label>
             <br>
-            <input class="inputis" name ="nombre" type="text" placeholder="nombre">
+            <input class="inputis" name ="nombre" type="text" placeholder="Nombre">
+            <br>
+            <label for="" class="labelregistro">Apellido Paterno</label>
+            <br>
+            <input class="inputis" name="paterno" type="text" placeholder="Apellido Paterno">
+            <br>
+            <label for="" class="labelregistro">Apellido Materno</label>
+            <br>
+            <input class="inputis" name ="materno" type="text" placeholder="Apellido Materno">
+            <br>
+            <label for="" class="labelregistro">Teléfono</label>
+            <br>
+            <input class="inputis" name ="telefono" type="text" placeholder="Teléfono">
             <br>
             <label for="" class="labelregistro">Correo</label>
             <br>
             <input class="inputis" name ="correo" type="text" placeholder="Correo">
-            <br>
-            <label for="" class="labelregistro">Apellido Paterno</label>
-            <br>
-            <input class="inputis" name="paterno" type="text" placeholder="apellido paterno">
-            <br>
-            <label for="" class="labelregistro">Apellido Materno</label>
-            <br>
-            <input class="inputis" name ="materno" type="text" placeholder="apellido materno">
             <br>
             <label for="" class="labelregistro">Contraseña</label>
             <br>

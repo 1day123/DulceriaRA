@@ -1,6 +1,6 @@
 <?php
 
-include("Conexion.php");
+include("Conexion.php");/*importa los datos que tiene la pagina conexion.php*/
 
 
 $email = $_POST['correo'];
