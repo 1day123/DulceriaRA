@@ -378,19 +378,19 @@ background-color: #ffffffa9;
 }
 
 .cards{
-    margin-top: 25vh;
-    width: 18vw;
-    height: 60vh;
+    
+    width: 350px;
+    height: 500px;
+   
    
     
 }
 .titutocars{
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: -35vh;
     position: relative;
     cursor: pointer;
     color: #ffffff;
-    font-size: 3rem;
     font-weight: bold;
     text-shadow: 0 0 5px #000000;
     max-width: 100%; /* Asegura que el texto no exceda el ancho del contenedor */
@@ -402,12 +402,17 @@ background-color: #ffffffa9;
 }
 
 .imagen{
-width: 100%;
-height: 100%;
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 2px rgba(243, 240, 241, 0.534);
+    /*rgba(197, 49, 110, 0.534)*/
+   
+   
 }
 #imagen1{
-    background-image: url(../img/dulcedefruta.jpg);
+    background-image: url(../img/imagenescategoria/dulcedefruta.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -418,57 +423,7 @@ height: 100%;
     transform: scale(1.1);
     filter: blur(1px);  
 }
-#imagen2{
-    background-image: url(../img/nuecesysemillas.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(5px);
-    transition: 0.3s ease;
-}
-#imagen3{
-    background-image: url(../img/picosito.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(5px);
-    transition: 0.3s ease;
-}
-#imagen4{
-    background-image: url(../img/dulce\ de\ leche.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(5px);
-    transition: 0.3s ease;
 
-}
-#imagen5{
-    background-image: url(../img/Dulcesconvento.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(5px);
-    transition: 0.3s ease;
-
-}
-
-#imagen2:hover{
-    transform: scale(1.1);
-    filter: blur(1px);  
-}
-#imagen3:hover{
-    transform: scale(1.1);
-    filter: blur(1px);  
-}
-#imagen4:hover{
-    transform: scale(1.1);
-    filter: blur(1px);  
-}
-#imagen5:hover{
-    transform: scale(1.1);
-    filter: blur(1px);  
-}
 
 
    

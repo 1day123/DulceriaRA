@@ -23,7 +23,7 @@
             <div class="col">
                 <nav class="nav navbar-expand-lg" id="menuc1">
                     <a class="nav-link" href="#pregunta">Inicio</a>
-                    <a class="nav-link" href="#cajacards" >Categorias</a>
+                    <a class="nav-link" href="#cajacards">Categorias</a>
                     <a class="nav-link" href="#">Mis compras</a>
                     <a class="nav-link" href="#">Buscar</a>
                     <a class="nav-link" href="../index.php">Salir</a>
@@ -36,26 +36,35 @@
             <h6 class="preguntainicio">¿Que deceas comprar?</h6>
         </div><!-- fin fila para el encabezado -->
         <div class="row" id="cajacards"><!-- fila para las categorias -->
-            <div class="cards" >
-                <div class="imagen" id="imagen1"></div>
-                <h4 class="titutocars">Dulces de fruta</h4>
-            </div>
-            <div class="cards">
-                <div class="imagen" id="imagen2"></div>
-                <h4 class="titutocars">Semillas</h4>
-            </div>
-            <div class="cards">
-                <div class="imagen" id="imagen3"></div>
-                <h4 class="titutocars">Picosito</h4>
-            </div>
-            <div class="cards">
-                <div class="imagen" id="imagen4"></div>
-                <h4 class="titutocars">Dulce de leche</h4>
-            </div>
-            <div class="cards">
-                <div class="imagen" id="imagen5"></div>
-                <h4 class="titutocars">Dulces de Convento</h4>
-            </div>
+
+            <?php
+            include("../Servidor/Conexion.php");
+            $consulta = "SELECT * FROM categorias";
+            $ejecutar = mysqli_query($conexion, $consulta);
+
+
+
+            if (mysqli_num_rows($ejecutar)) {
+                while ($datos = mysqli_fetch_array($ejecutar)) {
+                    $rutaimagen=$datos['imagen_categoria'];
+                    $nombrecategoria=$datos['nombre'];
+
+                    echo "<div class='cards'>
+          
+            <img class='imagen' id='imagen1' src='$rutaimagen' >
+            
+          
+            <h4 class='titutocars'>
+            $nombrecategoria
+            </h4>
+        </div>";
+                }
+            } else {
+                echo "te fallo master";
+            }
+
+
+            ?>
         </div><!-- fin fila para las categorias -->
     </div><!-- fin contenedor padre  -->
 
