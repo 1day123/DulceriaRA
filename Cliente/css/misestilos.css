@@ -216,7 +216,7 @@
     font-weight: bold;
     /*pone en negrita la letra*/
     font-size: 1.2vw;/*tamaño de letra del boton*/
-    margin-top: 1vh;
+    margin-top: 1.5vh;
     
  }
 
@@ -246,6 +246,11 @@
      font-size: 1.2rem;
      margin-top: -45vh;
  }
+ #datosre {
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-top: -35vh;
+}
 /*este estilo lo comparte con login y registro*/
  #titulois {
      font-weight: bold;
@@ -468,4 +473,117 @@ height: 100%;
 
    
   
-/* Para el registro de proveedores */
+/*Estilos Para el registro de proveedores */
+.labelregistropr {
+    position: absolute;
+    margin-left: -9vw;
+    font-weight: bold;
+    /*pone en negrita la letra*/
+    font-size: 1.2vw;/*tamaño de letra del boton*/
+    margin-top: 1.5vh;
+    
+ }
+ #registropr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 18vh;
+    width: 50vw;
+    height: 70vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    background-color: #ffffffef;
+ }
+ .selectrepartidor{
+margin-top: 2vh;
+width: auto;
+ }
+ #registrarprov {
+    width: 10vw;
+    background-color: #c5370c;
+    /*hace que el fondo tenga un color */
+    border: 1px solid #ccc;
+    /* tamaño del grosor borde del boton  */
+    border-radius: 15px;
+    position: absolute;
+    /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
+    top: 80vh;
+    /*dicta que se separe de su techo padre 70%*/
+    left: 50%;
+    /*se aleja de la izquierda a la mitad*/
+    transform: translate(-50%, -50%);
+    /*lo traslada completamente al centro pero es necesario el left y el top*/
+    font-weight: bold;
+    /*pone en negrita la letra*/
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 1vw;
+}
+
+/*Estilos para categorias*/
+#registrocategoria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 25vh;
+    width: 25vw;
+    height: 55vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    background-color: #ffffffef;
+ }
+ #registrarcategorias {
+    background-color: #c5370c;
+    /*hace que el fondo tenga un color */
+    border: 1px solid #ccc;
+    /* tamaño del grosor borde del boton  */
+    border-radius: 15px;
+    position: absolute;
+    /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
+    top: 65vh;
+    /*dicta que se separe de su techo padre 70%*/
+    left: 50%;
+    /*se aleja de la izquierda a la mitad*/
+    transform: translate(-50%, -50%);
+    /*lo traslada completamente al centro pero es necesario el left y el top*/
+    font-weight: bold;
+    /*pone en negrita la letra*/
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 1vw;
+}
+.labelregistrocat{
+    position: absolute;
+    display: block;
+    /*los forma en bloque un label en cima del input*/
+    font-weight: bold;
+    /*pone en negrita la letra*/
+    font-size: 1.2vw;/*tamaño de letra del boton*/
+    margin-top: 7vh;
+    
+ }
+ #titulocategoria {
+    font-weight: bold;
+    /*pone en negrita la letra*/
+    font-size: 2vw;
+    
+}
+.inputcat {
+    height: 4vh;
+    width: 18vw;
+    /* ajusta el anclo del input*/
+    margin-top: 8vh;
+    /*le da espacio al elemento de adentro a su alrededor*/
+    background-color: #ffffff79;
+    border: 1px solid #ccc;
+    /*ajusta el grosor del borde del input*/
+    border-radius: 8px;
+    font-size: 1.2vw;
+   
+    
+}
+#datoscat{
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-top: -55vh;
+}

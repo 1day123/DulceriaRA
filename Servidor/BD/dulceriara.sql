@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-03-2024 a las 08:25:56
+-- Tiempo de generación: 28-03-2024 a las 07:44:49
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -91,7 +91,10 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_producto`, `id_proveedor`, `id_categoria`, `nombre`, `caducidad`, `cantidad`, `fechacompra`, `precio`) VALUES
-(1, 1, 4, 'Jalea_manzana', '2025-03-26', 100, '2024-03-27', 50);
+(1, 1, 4, 'Jalea_manzana', '2025-03-26', 100, '2024-03-27', 50),
+(2, 1, 3, 'Cocada', '2027-03-26', 50, '2024-03-30', 10),
+(12, 26, 2, 'Macarrones', '2026-07-28', 14, '2024-03-28', 8),
+(13, 26, 1, 'Macarrones', '2026-04-28', 14, '2024-03-28', 8);
 
 -- --------------------------------------------------------
 
@@ -110,7 +113,9 @@ CREATE TABLE `proveedores` (
 --
 
 INSERT INTO `proveedores` (`id_proveedor`, `id_usuario`, `id_repartidor`) VALUES
-(1, 9, 1);
+(1, 9, 1),
+(2, 12, 2),
+(26, 39, 1);
 
 -- --------------------------------------------------------
 
@@ -128,7 +133,9 @@ CREATE TABLE `repartidores` (
 --
 
 INSERT INTO `repartidores` (`id_repartidor`, `id_usuario`) VALUES
-(1, 10);
+(1, 10),
+(2, 14),
+(3, 44);
 
 -- --------------------------------------------------------
 
@@ -178,7 +185,17 @@ INSERT INTO `usuarios` (`id_usuario`, `id_tipo_usuario`, `nombre`, `apellidopa`,
 (8, 2, 'Chio', 'Roldan', 'Rodriguez', 'chio@gmail.com', '2481525356', '12345678'),
 (9, 3, 'Chino', 'Botella', 'Luna', 'chino@gmail.com', '2456532241', '12345678'),
 (10, 4, 'Amando', 'Coraza', 'Perez', 'amando@gmail.com', '2458574469', '12345678'),
-(11, 5, 'Hanis', 'Coraza', 'Ramirez', 'hanis@gmail.com', '2451598586', '12345678');
+(11, 5, 'Hanis', 'Coraza', 'Ramirez', 'hanis@gmail.com', '2451598586', '12345678'),
+(12, 3, 'Ipolita', 'Lazcano', 'Ojeda', 'ipo@gmail.com', '2458651236', '12345678'),
+(13, 3, 'Mario', 'Castro', 'Gutierres', 'mario@gmail.com', '2458651237', '12345678'),
+(14, 4, 'Daniela', 'Coraza ', 'Roldan', 'daniela@gmail.com', '2458688237', '12345678'),
+(15, 3, 'Dayra', 'Roldan', 'Costeño', 'dadad@gmail.com', '+522461588', '12345678'),
+(39, 3, 'sharay', 'Roldan', 'Coste', 'dadad@gmail.com', '+522461588', '1111111'),
+(40, 4, 'Gengi', 'Reyes', 'Coraza', 'gengi@gmail.com', '1472586369', '12345678'),
+(41, 4, 'Gengi', 'Reyes', 'Coraza', 'gengi@gmail.com', '1472586369', '12345678'),
+(42, 4, 'Doga', 'Coraza', 'Roldan', 'doga@gmail.com', '5829631245', '12345678'),
+(43, 4, 'Doga', 'Coraza', 'Roldan', 'doga@gmail.com', '5829631245', '12345678'),
+(44, 4, 'Ingeniero', 'Coraza', 'Ramirez', 'inge@gmail.com', '2458635852', '12345678');
 
 --
 -- Índices para tablas volcadas
@@ -254,19 +271,19 @@ ALTER TABLE `compras`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedores`
 --
 ALTER TABLE `proveedores`
-  MODIFY `id_proveedor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_proveedor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `repartidores`
 --
 ALTER TABLE `repartidores`
-  MODIFY `id_repartidor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_repartidor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_usuarios`
@@ -278,7 +295,7 @@ ALTER TABLE `tipo_usuarios`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- Restricciones para tablas volcadas

@@ -10,7 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/misestilos.css">
-  <title>RegistrarProveedores</title>
+  <title>RegistrarProductos</title>
 </head>
 
 <body>
@@ -34,40 +34,37 @@
     <div class="row" id="contenedorregistrar"><!-- contenedor para el registro -->
       <section id="registropr">
 
-        <form id="datos" action="../Servidor/RegistrarProveedoresbd.php" method="POST"><!-- formulario para el registro -->
+        <form id="datos" action="../Servidor/RegistrarProductosbd.php" method="POST"><!-- formulario para el registro -->
           <img src="img/usuario.png" alt="" id="imagenusuariologin">
           <div class="row">
-            <h1 id="titulois">Registrar Proveedores</h1>
+            <h1 id="titulois">Registrar Productos</h1>
 
             <div class="col-6">
-              <label for="" class="labelregistropr">Nombre</label>
+              <label for="" class="labelregistropr">Nombre del producto</label>
               <br>
-              <input class="inputis" name="nombre" type="text" placeholder="Nombre">
+              <input class="inputis" name="nombreproducto" type="text" placeholder="Nombre del producto">
               <br>
-              <label for="" class="labelregistropr">Apellido Paterno</label>
+              <label for="" class="labelregistropr">Caducidad</label>
               <br>
-              <input class="inputis" name="paterno" type="text" placeholder="Apellido Paterno">
+              <input class="inputis" name="caducidad" type="date" placeholder="Caducidad">
               <br>
-              <label for="" class="labelregistropr">Apellido Materno</label>
+              <label for="" class="labelregistropr">Cantidad</label>
               <br>
-              <input class="inputis" name="materno" type="text" placeholder="Apellido Materno">
+              <input class="inputis" name="cantidad" type="text" placeholder="Cantidad">
               <br>
 
 
             </div>
             <div class="col-6">
-              <label for="" class="labelregistropr">Teléfono</label>
+              <label for="" class="labelregistropr">Fecha de compra</label>
               <br>
-              <input class="inputis" name="telefono" type="text" placeholder="Teléfono">
+              <input class="inputis" name="fcompra" type="date" placeholder="Fecha de compra">
               <br>
-              <label for="" class="labelregistropr">Correo</label>
+              <label for="" class="labelregistropr">Precio</label>
               <br>
-              <input class="inputis" name="correo" type="text" placeholder="Correo">
+              <input class="inputis" name="precio" type="text" placeholder="Precio">
               <br>
-              <label for="" class="labelregistropr">Contraseña</label>
-              <br>
-              <input class="inputis" name="contraseña" type="password" placeholder="Contraseña">
-              <input class="inputis" value="3" name="tipo_usuario" type="hidden" placeholder="tipodeusuario">
+
 
 
               <?php
@@ -76,19 +73,19 @@
   */
 
               ?>
-              <select name="repartidor" class="selectrepartidor">
-                <option value="">Selecciona un repartidor</option><!-- muestra el encabezado para el select con la primera opcion -->
+              <select name="proveedor" class="selectrepartidor">
+                <option value="">Selecciona un proveedor</option><!-- muestra el encabezado para el select con la primera opcion -->
 
                 <?php // agregamos codigo php para poder realizar una consulta en nuestro html
                 include_once("../Servidor/conexion.php"); //importamos todas la variables del documento conexion.php para poderlas usar aqui
-                $consulta = "SELECT id_usuario,id_repartidor FROM repartidores"; //consultamos los id_usuarios y id_repartidor que existen en la tabla repartidores
+                $consulta = "SELECT id_usuario,id_proveedor FROM proveedores"; //consultamos los id_usuarios y id_repartidor que existen en la tabla repartidores
                 $ejecutar = mysqli_query($conexion, $consulta); //ejecutamos la consulta estableciendo conexion con la bd y pedirle la consulta 
 
 
                 if (mysqli_num_rows($ejecutar) > 0) { // revisamos que la ejecucion tiene filas con datos
                   while ($persona = mysqli_fetch_array($ejecutar)) { //hacemos un arreglo con los datos que obtubimos en ejecutar osea la consulta
                 ?>
-                    <option value="<?php echo $persona['id_repartidor']; ?>"><!-- imprimimos el arreglo con el id repartidor en este caso es lo que va valer-->
+                    <option value="<?php echo $persona['id_proveedor']; ?>"><!-- imprimimos el arreglo con el id repartidor en este caso es lo que va valer-->
                       <?php echo $persona['id_usuario']; ?><!--imprimimos el arreglo con el id usuario en este caso es lo que va mostrar la opcion-->
                     </option>
                 <?php
@@ -96,13 +93,36 @@
                 } ?>
               </select>
 
+
               <br>
+
+              <select name="categoria" class="selectrepartidor">
+                <option value="">Selecciona una categoria</option><!-- muestra el encabezado para el select con la primera opcion -->
+
+                <?php // agregamos codigo php para poder realizar una consulta en nuestro html
+                include_once("../Servidor/conexion.php"); //importamos todas la variables del documento conexion.php para poderlas usar aqui
+                $consulta = "SELECT id_categoria,nombre FROM categorias"; //consultamos los id_usuarios y id_repartidor que existen en la tabla repartidores
+                $ejecutar = mysqli_query($conexion, $consulta); //ejecutamos la consulta estableciendo conexion con la bd y pedirle la consulta 
+
+
+                if (mysqli_num_rows($ejecutar) > 0) { // revisamos que la ejecucion tiene filas con datos
+                  while ($persona = mysqli_fetch_array($ejecutar)) { //hacemos un arreglo con los datos que obtubimos en ejecutar osea la consulta
+                ?>
+                    <option value="<?php echo $persona['id_categoria']; ?>"><!-- imprimimos el arreglo con el id repartidor en este caso es lo que va valer-->
+                      <?php echo $persona['nombre']; ?><!--imprimimos el arreglo con el id usuario en este caso es lo que va mostrar la opcion-->
+                    </option>
+                <?php
+                  }
+                } ?>
+              </select>
+
+
 
 
             </div>
 
 
-            <button type="submit" id="registrarprov">Registrarse</button>
+            <button type="submit" id="registrarprov">Registrar producto</button>
           </div>
         </form><!-- fin formulario para el registro -->
 

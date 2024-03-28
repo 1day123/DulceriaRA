@@ -10,7 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/misestilos.css">
-  <title>Registrarse</title>
+  <title>Registrar Categoria</title>
 </head>
 
 <body>
@@ -32,33 +32,17 @@
       </div>
     </div><!-- termina fila para el encabezado -->
     <div class="row" id="contenedorregistrar"><!-- contenedor para el registro -->
-      <section id="registro">
+      <section id="registrocategoria">
 
-        <form id="datosre" action="../Servidor/RegistrarUsuariosbd.php" method="POST"><!-- formulario para el registro -->
+        <form id="datoscat" action="../Servidor/RegistrarUsuariosbd.php" method="POST"><!-- formulario para el registro -->
           <img src="img/usuario.png" alt="" id="imagenusuariologin">
           <div class="form-group">
-          <h1 id="titulois">Registrarse</h1>
-            <label for="" class="labelregistro">Nombre</label>
+          <h1 id="titulocategoria">Registrar categoria</h1>
+            <label for="" class="labelregistrocat">Nombre</label>
             <br>
-            <input class="inputis" name ="nombre" type="text" placeholder="nombre">
-            <br>
-            <label for="" class="labelregistro">Correo</label>
-            <br>
-            <input class="inputis" name ="correo" type="text" placeholder="Correo">
-            <br>
-            <label for="" class="labelregistro">Apellido Paterno</label>
-            <br>
-            <input class="inputis" name="paterno" type="text" placeholder="apellido paterno">
-            <br>
-            <label for="" class="labelregistro">Apellido Materno</label>
-            <br>
-            <input class="inputis" name ="materno" type="text" placeholder="apellido materno">
-            <br>
-            <label for="" class="labelregistro">Contraseña</label>
-            <br>
-            <input class="inputis" name ="contraseña" type="password" placeholder="Contraseña">
-            <br>
-            <button type="submit" id="registrarse2">Registrarse</button>
+            <input class="inputcat" name ="nombre" type="text" placeholder="nombre">
+            
+            <button type="submit" id="registrarcategorias">Registrar Categoria</button>
           </div>
         </form><!-- fin formulario para el registro -->
 
