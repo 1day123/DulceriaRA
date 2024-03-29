@@ -1,544 +1,540 @@
- /*estilos para el fondo y el menu del index*/
+/*estilos para el fondo y el menu del index*/
 
- #fondoc1 {
+#fondoc1 {
+  background-image: url(../img/fondograsnillo.jpg);
 
-     background-image: url(../img/fondograsnillo.jpg);
+  /*hace que elfondo tenga un degradado circular*/
+  background-repeat: no-repeat;
+  /* no-repeat. Hace que la imagen de fondo no se repita en caso de que no llene toda la pantalla*/
+  background-size: cover;
+  /*cover es cubrir. Toda la imagen cubre la pantalla*/
+  height: 100vh;
+  /*vh, es alto de pantalla*/
+}
 
-     /*hace que elfondo tenga un degradado circular*/
-     background-repeat: no-repeat;
-     /* no-repeat. Hace que la imagen de fondo no se repita en caso de que no llene toda la pantalla*/
-     background-size: cover;
-     /*cover es cubrir. Toda la imagen cubre la pantalla*/
-     height: 100vh;
-     /*vh, es alto de pantalla*/
- }
+#logo {
+  height: 20vh;
+}
 
+@keyframes desplazarlogo {
+  /*keyframes: es una regla que manda instrucciones en el periodo de la animacion*/
+  /*se agrega un nombre a la animacion en este caso mover*/
+  /*y adentro de nuestra regla van todas las animaciones que deceamos que tenga pero sucesivamente*/
 
+  100% {
+    transform: rotate(320deg) translateY(0);
+    /* Final: rotación doble y traslación de regreso */
+  }
+}
 
+#logo {
+  animation: desplazarlogo 0.5s ease-in;
+  /* con alternate-reverse  comienza la animacion en el último paso y se mueve hacia atrás, luego hacia adelante por eso empieza con el 100%*/
+}
 
+#barrac1 {
+  height: 10vh;
+  width: 100vw;
+  /*vw, ancho de pantalla*/
+  position: fixed;
+}
 
- #logo {
-     height: 20vh;
-
- }
-
- @keyframes desplazarlogo {
-     /*keyframes: es una regla que manda instrucciones en el periodo de la animacion*/
-     /*se agrega un nombre a la animacion en este caso mover*/
-     /*y adentro de nuestra regla van todas las animaciones que deceamos que tenga pero sucesivamente*/
-
-
-
-
-
-     100% {
-         transform: rotate(320deg) translateY(0);
-         /* Final: rotación doble y traslación de regreso */
-     }
-
- }
-
- #logo {
-     animation: desplazarlogo 0.5s ease-in
-         /* con alternate-reverse  comienza la animacion en el último paso y se mueve hacia atrás, luego hacia adelante por eso empieza con el 100%*/
- }
-
-
- #barrac1 {
-     height: 10vh;
-     width: 100vw;
-     /*vw, ancho de pantalla*/
-     position: fixed;
- }
-
- #menuc1 {
-
-     font-size: 1rem;
-     /*fon-size. Dicta el tamño de letra*/
-     justify-content: flex-end;
-     /*flex-end en el justify-content. Acomoda a la derecha mi menu*/
-     text-decoration: none;
-     font-weight: bold;
- }
+#menuc1 {
+  font-size: 1rem;
+  /*fon-size. Dicta el tamño de letra*/
+  justify-content: flex-end;
+  /*flex-end en el justify-content. Acomoda a la derecha mi menu*/
+  text-decoration: none;
+  font-weight: bold;
+}
 /*seccion de navegacion para todos los modulos */
- .nav-link {
-     font-size: 1.3vw;
-     outline: none;
-     border: none;
-     text-decoration: none;
-     list-style-type: none;
-     color: #000000;
-     margin-top: 2.5vh;
-     /*margin-top. dicta la distancia que tiene arriba*/
-     text-decoration: none;
-     /*text-decoration: none. Quita el subrayado del enlace*/
-     transition: transform 0.5s ease;
-     /*ease hace que cuando escale con el hover sea suave*/
- }
+.nav-link {
+  font-size: 1.3vw;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+  color: #000000;
+  margin-top: 2.5vh;
+  /*margin-top. dicta la distancia que tiene arriba*/
+  text-decoration: none;
+  /*text-decoration: none. Quita el subrayado del enlace*/
+  transition: transform 0.5s ease;
+  /*ease hace que cuando escale con el hover sea suave*/
+}
 
- #menuc1 a.nav-link:hover {
-     font-weight: bold;
-     /* font-weight: bold. Hace la letra mas negrita*/
-     outline: none;
-     /* outline:none. Elimina el contorno alrededor de un elemento*/
-     color: #000000;
-     transform: scale(1.1);
-
- }
+#menuc1 a.nav-link:hover {
+  font-weight: bold;
+  /* font-weight: bold. Hace la letra mas negrita*/
+  outline: none;
+  /* outline:none. Elimina el contorno alrededor de un elemento*/
+  color: #000000;
+  transform: scale(1.1);
+}
 /*boton registrar del index */
- #botonregistrar {
-    display: flex;
-   text-align: center;
-   justify-content: center;
-   align-items: center;
-     border: 1px solid #ffffff;
-     /*grosor del borde del boton*/
-     font-size: 1.3vw;
-     text-decoration: none;
-     background-color: #c5370c;
-     /*hace que elfondo tenga un degradado circular*/
-     border-radius: 26px;
-     width: 7vw;
-     transition: transform 0.5s ease ;
+#botonregistrar {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ffffff;
+  /*grosor del borde del boton*/
+  font-size: 1.3vw;
+  text-decoration: none;
+  background-color: #c5370c;
+  /*hace que elfondo tenga un degradado circular*/
+  border-radius: 26px;
+  width: 7vw;
+  transition: transform 0.5s ease;
+}
 
- }
- 
- 
+/*Estilos para el eslogan y su difuminado del index */
 
- /*Estilos para el eslogan y su difuminado del index */
+#bienvenida {
+  height: 80vh;
+  background-color: #ffffff94;
+  max-width: 90vw;
+  /* max width Establece un ancho máximo para tu sección */
+  margin: 0 auto;
+  /*margin  Auto-centra la sección horizontalmente */
+  padding: 20vh;
+  /* padding Agrega espacio dentro de la sección osea centra el texto en la cajita*/
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  /* display y justify content acomodan los hijos del cuadro bienvenida AL CENTRO CON CENRTER*/
+}
 
- #bienvenida {
-     height: 80vh;
-     background-color: #ffffff94;
-     max-width: 90vw;
-     /* max width Establece un ancho máximo para tu sección */
-     margin: 0 auto;
-     /*margin  Auto-centra la sección horizontalmente */
-     padding: 20vh;
-     /* padding Agrega espacio dentro de la sección osea centra el texto en la cajita*/
-     margin-top: 10vh;
-     display: flex;
-     justify-content: center;
-     /* display y justify content acomodan los hijos del cuadro bienvenida AL CENTRO CON CENRTER*/
- }
+#eslogan {
+  margin-top: 1vh;
+  /*margin top hace que tenga un espacio arriba del cuadro blanco transparente del centro*/
+  text-align: center;
+  /*centra mi texto*/
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 4vw;
+  /*font size da el tamaño a mi letra*/
+  font-weight: bold;
+  /*font weight bol pone negritas las letras*/
+}
 
- #eslogan {
-     margin-top: 1vh;
-     /*margin top hace que tenga un espacio arriba del cuadro blanco transparente del centro*/
-     text-align: center;
-     /*centra mi texto*/
-     font-family: 'Trebuchet MS', sans-serif;
-     font-size: 4vw;
-     /*font size da el tamaño a mi letra*/
-     font-weight: bold;
-     /*font weight bol pone negritas las letras*/
- }
+/*Estilos para el boton de entrar del index*/
 
+#boton1 {
+  text-align: center;
+  margin-top: -25vh;
+}
 
+#entraya {
+  font-weight: bold;
+  background-color: #c5370c;
+  /*hace que elfondo tenga un degradado circular*/
+  border: 1px solid #ffffff;
+  /*grosor del borde del boton*/
+  height: 9vh;
+  width: 14vw;
+  font-size: 2vw;
+  border-radius: 24px;
+  margin-top: 10vh;
+  color: rgb(255, 255, 255);
+  line-height: 7vh;
+  /*centra la letra del boton en medio del cuadrito*/
+  transition: background-color 0.3s ease;
+  transition: transform 0.5s ease;
+  /*ease hace que cuando escale con el hover sea suave*/
+}
 
- /*Estilos para el boton de entrar del index*/
-
- #boton1 {
-     text-align: center;
-     margin-top: -25vh;
- }
-
- #entraya {
-     font-weight: bold;
-     background-color: #c5370c;
-     /*hace que elfondo tenga un degradado circular*/
-     border: 1px solid #ffffff;
-     /*grosor del borde del boton*/
-     height: 9vh;
-     width: 14vw;
-     font-size: 2vw;
-     border-radius: 24px;
-     margin-top: 10vh;
-     color: rgb(255, 255, 255);
-     line-height: 7vh;
-     /*centra la letra del boton en medio del cuadrito*/
-     transition: background-color 0.3s ease;
-     transition: transform 0.5s ease;
-     /*ease hace que cuando escale con el hover sea suave*/
- }
-
- #entraya:hover {
-     color: #ffffff;
-     transform: scale(1.1);
-
- }
+#entraya:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
 /*Estilos registrar*/
- #contenedorregistrar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+#contenedorregistrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 /*cuadro de fondo del registro*/
-#registro{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   margin-top: 20vh;
-   width: 25vw;
-   height: 75vh;
-   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-   background-color: #ffffffef;
+#registro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20vh;
+  width: 25vw;
+  height: 75vh;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-color: #ffffffef;
 }
 
 /*Estilos de boton regitrarse*/
 
 #registrarse2 {
-    background-color: #c5370c;
-    /*hace que el fondo tenga un color */
-    border: 1px solid #ccc;
-    /* tamaño del grosor borde del boton  */
-    border-radius: 15px;
-    position: absolute;
-    /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
-    top: 90vh;
-    /*dicta que se separe de su techo padre 70%*/
-    left: 50%;
-    /*se aleja de la izquierda a la mitad*/
-    transform: translate(-50%, -50%);
-    /*lo traslada completamente al centro pero es necesario el left y el top*/
-    font-weight: bold;
-    /*pone en negrita la letra*/
-    padding: 10px 20px;
-    color: #ffffff;
-    font-size: 1vw;
+  background-color: #c5370c;
+  /*hace que el fondo tenga un color */
+  border: 1px solid #ccc;
+  /* tamaño del grosor borde del boton  */
+  border-radius: 15px;
+  position: absolute;
+  /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
+  top: 90vh;
+  /*dicta que se separe de su techo padre 70%*/
+  left: 50%;
+  /*se aleja de la izquierda a la mitad*/
+  transform: translate(-50%, -50%);
+  /*lo traslada completamente al centro pero es necesario el left y el top*/
+  font-weight: bold;
+  /*pone en negrita la letra*/
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 1vw;
 }
 .labelregistro {
-    position: absolute;
-    display: block;
-    /*los forma en bloque un label en cima del input*/
-    font-weight: bold;
-    /*pone en negrita la letra*/
-    font-size: 1.2vw;/*tamaño de letra del boton*/
-    margin-top: 1.5vh;
-    
- }
+  position: absolute;
+  display: block;
+  /*los forma en bloque un label en cima del input*/
+  font-weight: bold;
+  /*pone en negrita la letra*/
+  font-size: 1.2vw; /*tamaño de letra del boton*/
+  margin-top: 1.5vh;
+}
 
- /*Estilos para el login */
+/*Estilos para el login */
 /*posision del cuadro del registro para el login*/
- #contenedorlogin {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
- }
- /*cuadro del registro para el login*/
- #login {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-     margin-top: 22vh;
-     width: 25vw;
-     height: 70vh;
-     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-     background-color: #ffffffef;
- }
-/*este estilo lo comparte con login y registro*/
- #datos {
-     border-radius: 5px;
-     font-size: 1.2rem;
-     margin-top: -45vh;
- }
- #datosre {
-    border-radius: 5px;
-    font-size: 1.2rem;
-    margin-top: -35vh;
+#contenedorlogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/*cuadro del registro para el login*/
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 22vh;
+  width: 25vw;
+  height: 70vh;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-color: #ffffffef;
 }
 /*este estilo lo comparte con login y registro*/
- #titulois {
-     font-weight: bold;
-     /*pone en negrita la letra*/
-     font-size: 2vw;
-     margin-bottom: 5px;
- }
+#datos {
+  border-radius: 5px;
+  font-size: 1.2rem;
+  margin-top: -45vh;
+}
+#datosre {
+  border-radius: 5px;
+  font-size: 1.2rem;
+  margin-top: -35vh;
+}
+/*este estilo lo comparte con login y registro*/
+#titulois {
+  font-weight: bold;
+  /*pone en negrita la letra*/
+  font-size: 2vw;
+  margin-bottom: 5px;
+}
 /*Estilo para el inicio Sesion*/
- 
+
 /*este estilo lo comparte con login y registro*/
 
- .inputis {
-     height: 4vh;
-     width: 18vw;
-     /* ajusta el anclo del input*/
-     margin-top: 2vh;
-     /*le da espacio al elemento de adentro a su alrededor*/
-     background-color: #ffffff79;
-     border: 1px solid #ccc;
-     /*ajusta el grosor del borde del input*/
-     border-radius: 8px;
-     font-size: 1.2vw;
-    
-     
- }
+.inputis {
+  height: 4vh;
+  width: 18vw;
+  /* ajusta el anclo del input*/
+  margin-top: 2vh;
+  /*le da espacio al elemento de adentro a su alrededor*/
+  background-color: #ffffff79;
+  border: 1px solid #ccc;
+  /*ajusta el grosor del borde del input*/
+  border-radius: 8px;
+  font-size: 1.2vw;
+}
 
- 
- .labellogin {
-    position: absolute;
-    display: block;
-    /*los forma en bloque un label en cima del input*/
-    font-weight: bold;
-    /*pone en negrita la letra*/
-    font-size: 1.2vw;/*tamaño de letra del boton*/
-    margin-top: 1vh;
-    margin-left: 1.3vw;
-    
- }
+.labellogin {
+  position: absolute;
+  display: block;
+  /*los forma en bloque un label en cima del input*/
+  font-weight: bold;
+  /*pone en negrita la letra*/
+  font-size: 1.2vw; /*tamaño de letra del boton*/
+  margin-top: 1vh;
+  margin-left: 1.3vw;
+}
 /*boton para iniciar sesion*/
- #iniciarsesion {
-    
-        background-color: #c5370c;
-        /*hace que el fondo tenga un color */
-        border: 1px solid #ccc;
-        /* tamaño del grosor borde del boton  */
-        border-radius: 15px;
-        position: absolute;
-        /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
-        top: 80vh;
-        /*dicta que se separe de su techo padre 70%*/
-        left: 50%;
-        /*se aleja de la izquierda a la mitad*/
-        transform: translate(-50%, -50%);
-        /*lo traslada completamente al centro pero es necesario el left y el top*/
-        font-weight: bold;
-        /*pone en negrita la letra*/
-        padding: 10px 20px;
-        color: #ffffff;
-        font-size: 1vw;
- }
-
- #fondoregistrar {
-     background-image: url(../img/fondoleche.jpg);
-     /*hace que elfondo tenga un degradado circular*/
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center;
-     height: 100vh;
- }
-
- #imagenusuariologin {
-     width: 13vw;
-     height: 25vh;
-     margin-top: 15vh;
-
- }
-
- #infocontra {
-     margin-top: 7vh;
-     /*pone en negrita la letra*/
-     font-size: 1.2vw;
- }
-
- 
- /*Estilos para el modulo inicio*/
- #barrac1inicio{
-    height: 10vh;
-     width: 100vw;
-     /*vw, ancho de pantalla*/
-     position: fixed;
-background-color: #ffffffa9;    
+#iniciarsesion {
+  background-color: #c5370c;
+  /*hace que el fondo tenga un color */
+  border: 1px solid #ccc;
+  /* tamaño del grosor borde del boton  */
+  border-radius: 15px;
+  position: absolute;
+  /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
+  top: 80vh;
+  /*dicta que se separe de su techo padre 70%*/
+  left: 50%;
+  /*se aleja de la izquierda a la mitad*/
+  transform: translate(-50%, -50%);
+  /*lo traslada completamente al centro pero es necesario el left y el top*/
+  font-weight: bold;
+  /*pone en negrita la letra*/
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 1vw;
 }
- #pregunta{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
-    width: 100vw;
- }
- .preguntainicio{
-    font-size: 7rem;
-    
-    
- }
- #iniciofondo{
-    background-image: url(../img/fondocolores.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
- }
+
+#fondoregistrar {
+  background-image: url(../img/fondoleche.jpg);
+  /*hace que elfondo tenga un degradado circular*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+#imagenusuariologin {
+  width: 13vw;
+  height: 25vh;
+  margin-top: 15vh;
+}
+
+#infocontra {
+  margin-top: 7vh;
+  /*pone en negrita la letra*/
+  font-size: 1.2vw;
+}
+
+/*Estilos para el modulo inicio*/
+#barrac1inicio {
+  height: 10vh;
+  width: 100vw;
+  /*vw, ancho de pantalla*/
+  position: fixed;
+  background-color: #ffffffa9;
+}
+#pregunta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+.preguntainicio {
+  font-size: 7rem;
+}
+#iniciofondo {
+  background-image: url(../img/fondocolores.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 /*estilos para las cards*/
-#cajacards{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
-    width: 100vw;
-   
+#cajacards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+ 
 }
 
-.cards{
-    
-    width: 350px;
-    height: 500px;
-   
-   
-    
+.cards {
+  width: 350px;
+  height: 500px;
 }
-.titutocars{
-    font-size: 2rem;
-    margin-top: -35vh;
-    position: relative;
-    cursor: pointer;
-    color: #ffffff;
-    font-weight: bold;
-    text-shadow: 0 0 5px #000000;
-    max-width: 100%; /* Asegura que el texto no exceda el ancho del contenedor */
-    overflow: hidden; /* Oculta cualquier contenido que exceda el tamaño del contenedor */
-     /* Evita que el texto se divida en varias líneas */
-    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al texto desbordado */
-    transition: text-shadow 0.3s ease; /* Transición suave para el efecto de sombra */
-
+.titutocars {
+  font-size: 2rem;
+  margin-top: -35vh;
+  position: relative;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0 0 5px #000000;
+  max-width: 100%; /* Asegura que el texto no exceda el ancho del contenedor */
+  overflow: hidden; /* Oculta cualquier contenido que exceda el tamaño del contenedor */
+  /* Evita que el texto se divida en varias líneas */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al texto desbordado */
+  transition: text-shadow 0.3s ease; /* Transición suave para el efecto de sombra */
 }
 
-.imagen{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 0 15px 2px rgba(243, 240, 241, 0.534);
-    /*rgba(197, 49, 110, 0.534)*/
-   
-   
+.imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 15px 2px rgba(243, 240, 241, 0.534);
+  /*rgba(197, 49, 110, 0.534)*/
 }
-#imagen1{
-    background-image: url(../img/imagenescategoria/dulcedefruta.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(5px);
-    transition: 0.3s ease;
+#imagen1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(5px);
+  transition: 0.3s ease;
 }
-#imagen1:hover{
-    transform: scale(1.1);
-    filter: blur(1px);  
+#imagen1:hover {
+  transform: scale(1.1);
+  filter: blur(1px);
 }
 
-
-
-   
-  
 /*Estilos Para el registro de proveedores */
 .labelregistropr {
-    position: absolute;
-    margin-left: -9vw;
-    font-weight: bold;
-    /*pone en negrita la letra*/
-    font-size: 1.2vw;/*tamaño de letra del boton*/
-    margin-top: 1.5vh;
-    
- }
- #registropr{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 18vh;
-    width: 50vw;
-    height: 70vh;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    background-color: #ffffffef;
- }
- .selectrepartidor{
-margin-top: 2vh;
-width: auto;
- }
- #registrarprov {
-    width: 10vw;
-    background-color: #c5370c;
-    /*hace que el fondo tenga un color */
-    border: 1px solid #ccc;
-    /* tamaño del grosor borde del boton  */
-    border-radius: 15px;
-    position: absolute;
-    /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
-    top: 80vh;
-    /*dicta que se separe de su techo padre 70%*/
-    left: 50%;
-    /*se aleja de la izquierda a la mitad*/
-    transform: translate(-50%, -50%);
-    /*lo traslada completamente al centro pero es necesario el left y el top*/
-    font-weight: bold;
-    /*pone en negrita la letra*/
-    padding: 10px 20px;
-    color: #ffffff;
-    font-size: 1vw;
+  position: absolute;
+  margin-left: -9vw;
+  font-weight: bold;
+  /*pone en negrita la letra*/
+  font-size: 1.2vw; /*tamaño de letra del boton*/
+  margin-top: 1.5vh;
+}
+#registropr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 18vh;
+  width: 50vw;
+  height: 70vh;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-color: #ffffffef;
+}
+.selectrepartidor {
+  margin-top: 2vh;
+  width: auto;
+}
+#registrarprov {
+  width: 10vw;
+  background-color: #c5370c;
+  /*hace que el fondo tenga un color */
+  border: 1px solid #ccc;
+  /* tamaño del grosor borde del boton  */
+  border-radius: 15px;
+  position: absolute;
+  /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
+  top: 80vh;
+  /*dicta que se separe de su techo padre 70%*/
+  left: 50%;
+  /*se aleja de la izquierda a la mitad*/
+  transform: translate(-50%, -50%);
+  /*lo traslada completamente al centro pero es necesario el left y el top*/
+  font-weight: bold;
+  /*pone en negrita la letra*/
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 1vw;
 }
 
 /*Estilos para categorias*/
-#registrocategoria{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 25vh;
-    width: 25vw;
-    height: 55vh;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    background-color: #ffffffef;
- }
- #registrarcategorias {
-    background-color: #c5370c;
-    /*hace que el fondo tenga un color */
-    border: 1px solid #ccc;
-    /* tamaño del grosor borde del boton  */
-    border-radius: 15px;
-    position: absolute;
-    /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
-    top: 65vh;
-    /*dicta que se separe de su techo padre 70%*/
-    left: 50%;
-    /*se aleja de la izquierda a la mitad*/
-    transform: translate(-50%, -50%);
-    /*lo traslada completamente al centro pero es necesario el left y el top*/
-    font-weight: bold;
-    /*pone en negrita la letra*/
-    padding: 10px 20px;
-    color: #ffffff;
-    font-size: 1vw;
+#registrocategoria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 25vh;
+  width: 25vw;
+  height: 55vh;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-color: #ffffffef;
 }
-.labelregistrocat{
-    position: absolute;
-    display: block;
-    /*los forma en bloque un label en cima del input*/
-    font-weight: bold;
-    /*pone en negrita la letra*/
-    font-size: 1.2vw;/*tamaño de letra del boton*/
-    margin-top: 7vh;
-    
- }
- #titulocategoria {
-    font-weight: bold;
-    /*pone en negrita la letra*/
-    font-size: 2vw;
-    
+#registrarcategorias {
+  background-color: #c5370c;
+  /*hace que el fondo tenga un color */
+  border: 1px solid #ccc;
+  /* tamaño del grosor borde del boton  */
+  border-radius: 15px;
+  position: absolute;
+  /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
+  top: 65vh;
+  /*dicta que se separe de su techo padre 70%*/
+  left: 50%;
+  /*se aleja de la izquierda a la mitad*/
+  transform: translate(-50%, -50%);
+  /*lo traslada completamente al centro pero es necesario el left y el top*/
+  font-weight: bold;
+  /*pone en negrita la letra*/
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 1vw;
+}
+.labelregistrocat {
+  position: absolute;
+  display: block;
+  /*los forma en bloque un label en cima del input*/
+  font-weight: bold;
+  /*pone en negrita la letra*/
+  font-size: 1.2vw; /*tamaño de letra del boton*/
+  margin-top: 2vh;
+}
+#titulocategoria {
+  font-weight: bold;
+  /*pone en negrita la letra*/
+  font-size: 2vw;
 }
 .inputcat {
-    height: 4vh;
-    width: 18vw;
-    /* ajusta el anclo del input*/
-    margin-top: 8vh;
-    /*le da espacio al elemento de adentro a su alrededor*/
-    background-color: #ffffff79;
-    border: 1px solid #ccc;
-    /*ajusta el grosor del borde del input*/
-    border-radius: 8px;
-    font-size: 1.2vw;
-   
-    
+  height: 4vh;
+  width: 18vw;
+  /* ajusta el anclo del input*/
+  margin-top: 4vh;
+  /*le da espacio al elemento de adentro a su alrededor*/
+  background-color: #ffffff79;
+  border: 1px solid #ccc;
+  /*ajusta el grosor del borde del input*/
+  border-radius: 8px;
+  font-size: 1.2vw;
 }
-#datoscat{
-    border-radius: 5px;
-    font-size: 1.2rem;
-    margin-top: -55vh;
+#datoscat {
+  border-radius: 5px;
+  font-size: 1.2rem;
+  margin-top: -55vh;
 }
+
+/*empiezan estilos para el dropdown de inicio*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#btngrupinicio {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /*grosor del borde del boton*/
+  font-size: 1.3vw;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #e4007c;
+  /*hace que elfondo tenga un degradado circular*/
+  border-radius: 17px;
+  width: 7vw;
+  transition: transform 0.5s ease;
+}
+
+/*terminan estilos de dropdown inicio*/

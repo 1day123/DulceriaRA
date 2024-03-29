@@ -24,10 +24,7 @@
 
       <div class="col">
         <nav class="nav navbar-expand-lg" id="menuc1">
-          <a class="nav-link" href="RegistrarProveedores.php">Registrar Proveedores</a>
-          <a class="nav-link" href="RegistrarRepartidores.php">Registrar Repartidores</a>
-          <a class="nav-link" href="RegistrarCategoria.php">Registrar Categorias</a>
-          <a class="nav-link" href="../index.php">Regresar</a>
+        <a class="nav-link" href="inicio.php">Regresar</a>>
         </nav>
       </div>
     </div><!-- termina fila para el encabezado -->

@@ -24,23 +24,22 @@
         
         <div class="col">
         <nav class="nav navbar-expand-lg" id="menuc1">
-          <a class="nav-link" href="RegistrarProveedores.php">Registrar Proveedores</a>
-          <a class="nav-link" href="RegistrarRepartidores.php">Registrar Repartidores</a>
-          <a class="nav-link" href="RegistrarCategoria.php">Registrar Categorias</a>
-          <a class="nav-link" href="../index.php">Regresar</a>
+        <a class="nav-link" href="inicio.php">Regresar</a>
         </nav>
       </div>
     </div><!-- termina fila para el encabezado -->
     <div class="row" id="contenedorregistrar"><!-- contenedor para el registro -->
       <section id="registrocategoria">
 
-        <form id="datoscat" action="../Servidor/RegistrarUsuariosbd.php" method="POST"><!-- formulario para el registro -->
+        <form id="datoscat" action="../Servidor/RegistrarcategoriasBD.php" method="POST"><!-- formulario para el registro -->
           <img src="img/usuario.png" alt="" id="imagenusuariologin">
           <div class="form-group">
           <h1 id="titulocategoria">Registrar categoria</h1>
             <label for="" class="labelregistrocat">Nombre</label>
             <br>
             <input class="inputcat" name ="nombre" type="text" placeholder="nombre">
+            <br>
+            <input class="inputcat" name ="imagen" type="text" placeholder="Escribe la ruta de la imagen">
             
             <button type="submit" id="registrarcategorias">Registrar Categoria</button>
           </div>

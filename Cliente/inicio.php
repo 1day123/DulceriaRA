@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
     <div class="container-fluid" id="iniciofondo"><!--contenedor padre  -->
         <div class="row" id="barrac1inicio"><!-- fila para el encabezado -->
             <div class="col">
@@ -26,10 +27,21 @@
                     <a class="nav-link" href="#cajacards">Categorias</a>
                     <a class="nav-link" href="#">Mis compras</a>
                     <a class="nav-link" href="#">Buscar</a>
+                    <div class="dropdown">
+                        <button class="nav-link" href="Cliente/registrarse.php" id="btngrupinicio" style="color: aliceblue">Registrar</button>
+                        <div class="dropdown-content">
+                            <a href="RegistrarProveedores.php">Registrar Proveedores</a>
+                            <a href="RegistrarRepartidores.php">Registrar Repartidores</a>
+                            <a href="RegistrarCategoria.php">Registrar Categorias</a>
+                            <a href="RegistrarProductos.php">Registrar Productos</a>
+                        </div>
+                    </div>
+
                     <a class="nav-link" href="../index.php">Salir</a>
                 </nav>
 
             </div>
+
 
         </div><!-- fila para el encabezado -->
         <div class="row" id="pregunta"><!-- fila para la pregunta -->
@@ -37,7 +49,7 @@
         </div><!-- fin fila para el encabezado -->
         <div class="row" id="cajacards"><!-- fila para las categorias -->
 
-            <?php
+        <?php
             include("../Servidor/Conexion.php");
             $consulta = "SELECT * FROM categorias";
             $ejecutar = mysqli_query($conexion, $consulta);
@@ -65,6 +77,8 @@
 
 
             ?>
+
+
         </div><!-- fin fila para las categorias -->
     </div><!-- fin contenedor padre  -->
 
