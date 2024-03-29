@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-03-2024 a las 07:44:49
+-- Tiempo de generación: 29-03-2024 a las 07:39:13
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -29,23 +29,28 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `categorias` (
   `id_categoria` int(11) NOT NULL,
-  `nombre` varchar(20) NOT NULL
+  `nombre` varchar(20) NOT NULL,
+  `imagen_categoria` varchar(80) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `categorias`
 --
 
-INSERT INTO `categorias` (`id_categoria`, `nombre`) VALUES
-(1, 'leche_cajeta'),
-(2, 'tamarindo'),
-(3, 'coco'),
-(4, 'frutas'),
-(5, 'pilonsillo'),
-(6, 'amaranto'),
-(7, 'chocolate'),
-(8, 'regionales'),
-(9, 'enchilados');
+INSERT INTO `categorias` (`id_categoria`, `nombre`, `imagen_categoria`) VALUES
+(1, 'leche_cajeta', 'img/imagenescategoria/dulceleche.jpg'),
+(2, 'tamarindo', 'img/imagenescategoria/picosito.jpg'),
+(3, 'coco', 'img/imagenescategoria/cocadas.jpg'),
+(4, 'frutas', 'img/imagenescategoria/dulcedefruta.jpg'),
+(5, 'pilonsillo', 'img/imagenescategoria/Dulcesconvento.jpg'),
+(6, 'amaranto', 'img/imagenescategoria/nuecesysemillas.jpg'),
+(7, 'chocolate', 'img/imagenescategoria/chocolate.jpg'),
+(8, 'regionales', 'img/imagenescategoria/galletasc.jpg'),
+(9, 'enchilados', 'img/imagenescategoria/fondochile.jpg'),
+(10, 'Dulcesfavoritoscaja', 'img/imagenescategoria/tamarindo.jpg'),
+(13, 'Arreglos', 'img/imagenescategoria/arreglos.jpg'),
+(14, 'Tamarindo enchilado', 'img/imagenescategoria/tamarindo.jpg'),
+(15, 'Dulcescaja', 'img/imagenescategoria/dulcedefruta.jpg');
 
 -- --------------------------------------------------------
 
@@ -94,7 +99,15 @@ INSERT INTO `productos` (`id_producto`, `id_proveedor`, `id_categoria`, `nombre`
 (1, 1, 4, 'Jalea_manzana', '2025-03-26', 100, '2024-03-27', 50),
 (2, 1, 3, 'Cocada', '2027-03-26', 50, '2024-03-30', 10),
 (12, 26, 2, 'Macarrones', '2026-07-28', 14, '2024-03-28', 8),
-(13, 26, 1, 'Macarrones', '2026-04-28', 14, '2024-03-28', 8);
+(13, 26, 1, 'Macarrones', '2026-04-28', 14, '2024-03-28', 8),
+(14, 1, 6, 'Alegria', '2027-03-26', 50, '2024-03-28', 10),
+(15, 2, 5, 'pilonsillo', '2027-03-26', 50, '2024-03-28', 10),
+(16, 2, 7, 'chocolate', '2027-03-26', 50, '2024-03-28', 10),
+(19, 2, 8, 'regionales', '2027-03-26', 50, '2024-03-28', 10),
+(20, 1, 9, 'enchilados', '2027-03-26', 50, '2024-03-28', 10),
+(21, 1, 10, 'enchilados', '2027-03-26', 50, '2024-03-28', 10),
+(22, 1, 13, 'Arreglos', '2027-03-26', 50, '2024-03-28', 10),
+(23, 2, 14, 'enchilados', '2027-03-26', 50, '2024-03-28', 10);
 
 -- --------------------------------------------------------
 
@@ -259,7 +272,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `compras`
@@ -271,7 +284,7 @@ ALTER TABLE `compras`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedores`
