@@ -48,8 +48,8 @@
             <h6 class="preguntainicio">¿Que deceas comprar?</h6>
         </div><!-- fin fila para el encabezado -->
         <div class="row" id="cajacards"><!-- fila para las categorias -->
-
-        <?php
+  
+            <?php
             include("../Servidor/Conexion.php");
             $consulta = "SELECT * FROM categorias";
             $ejecutar = mysqli_query($conexion, $consulta);
@@ -58,18 +58,24 @@
 
             if (mysqli_num_rows($ejecutar)) {
                 while ($datos = mysqli_fetch_array($ejecutar)) {
-                    $rutaimagen=$datos['imagen_categoria'];
-                    $nombrecategoria=$datos['nombre'];
+                    $rutaimagen = $datos['imagen_categoria'];
+                    $nombrecategoria = $datos['nombre'];
+                    $id_categoria = $datos['id_categoria'];
 
-                    echo "<div class='cards'>
-          
-            <img class='imagen' id='imagen1' src='$rutaimagen' >
-            
-          
-            <h4 class='titutocars'>
-            $nombrecategoria
-            </h4>
-        </div>";
+                    
+                    echo "<form class='col'  action='MostrarProductos.php' method='POST'>
+                    <div class='cards'>
+                    <img class='imagen' id='imagen1' src='$rutaimagen' >
+                    <div class='Tituloimagen'>
+                    <h4 class='titutocars'>
+                        $nombrecategoria
+                        <input type='hidden' value='$id_categoria' name='id_categoria'>
+                        <button type='submit' id='btncatview'>Ver categoría</button>
+                    </h4>
+                </div>
+                    </div>                    
+                    </form>";
+                    
                 }
             } else {
                 echo "te fallo master";
