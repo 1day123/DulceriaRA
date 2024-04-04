@@ -17,14 +17,15 @@
 
 
   <div class="container-fluid" id="fondoregistrar">
-    <div class="row" id="barrac1"><!-- fila para el encabezado -->
+  <div class="row barra-navegacion"><!-- fila para el encabezado -->
       <div class="col">
-        <img src="img/logosfs.png" alt="" id="logo">
-      </div>
-
-      <div class="col">
-        <nav class="nav navbar-expand-lg" id="menuc1">
-        <a class="nav-link" href="inicio.php">Regresar</a>
+        <img src="img/logosfs.png" alt="" class="logo">
+        </div>
+        
+        <div class="col">
+        <nav class="nav navbar-expand-lg menu-navegacion" >
+         
+          <a class="nav-link" href="../index.php">Regresar</a>
         </nav>
       </div>
     </div><!-- termina fila para el encabezado -->
@@ -75,7 +76,12 @@
 
                 <?php // agregamos codigo php para poder realizar una consulta en nuestro html
                 include_once("../Servidor/conexion.php"); //importamos todas la variables del documento conexion.php para poderlas usar aqui
-                $consulta = "SELECT id_usuario,id_proveedor FROM proveedores"; //consultamos los id_usuarios y id_repartidor que existen en la tabla repartidores
+                $consulta = "SELECT u.nombre,
+                                    p.id_proveedor
+                             FROM proveedores as p
+                             INNER JOIN usuarios as u
+                             ON p.id_usuario = u.id_usuario
+                                    "; //consultamos los id_usuarios y id_repartidor que existen en la tabla repartidores
                 $ejecutar = mysqli_query($conexion, $consulta); //ejecutamos la consulta estableciendo conexion con la bd y pedirle la consulta 
 
 
@@ -83,7 +89,7 @@
                   while ($persona = mysqli_fetch_array($ejecutar)) { //hacemos un arreglo con los datos que obtubimos en ejecutar osea la consulta
                 ?>
                     <option value="<?php echo $persona['id_proveedor']; ?>"><!-- imprimimos el arreglo con el id repartidor en este caso es lo que va valer-->
-                      <?php echo $persona['id_usuario']; ?><!--imprimimos el arreglo con el id usuario en este caso es lo que va mostrar la opcion-->
+                      <?php echo $persona['nombre']; ?><!--imprimimos el arreglo con el id usuario en este caso es lo que va mostrar la opcion-->
                     </option>
                 <?php
                   }

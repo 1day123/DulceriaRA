@@ -1,19 +1,15 @@
-/*estilos para el fondo y el menu del index*/
+/*-----------------------------------------estilos para el fondo y el menu del index---------------------------------*/
 
-#fondoc1 {
-  background-image: url(../img/fondograsnillo.jpg);
-
-  /*hace que elfondo tenga un degradado circular*/
-  background-repeat: no-repeat;
-  /* no-repeat. Hace que la imagen de fondo no se repita en caso de que no llene toda la pantalla*/
-  background-size: cover;
-  /*cover es cubrir. Toda la imagen cubre la pantalla*/
+.index-fondo {
   height: 100vh;
-  /*vh, es alto de pantalla*/
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
-#logo {
-  height: 20vh;
+.logo {
+  height: 18vh;
+  animation: desplazarlogo 0.5s ease-in; /* con alternate-reverse  comienza la animacion en el último paso y se mueve hacia atrás, luego hacia adelante por eso empieza con el 100%*/
 }
 
 @keyframes desplazarlogo {
@@ -27,19 +23,15 @@
   }
 }
 
-#logo {
-  animation: desplazarlogo 0.5s ease-in;
-  /* con alternate-reverse  comienza la animacion en el último paso y se mueve hacia atrás, luego hacia adelante por eso empieza con el 100%*/
-}
-
-#barrac1 {
+.barra-navegacion {
+  position: absolute;
   height: 10vh;
   width: 100vw;
   /*vw, ancho de pantalla*/
-  position: fixed;
+  top: 0;
 }
 
-#menuc1 {
+.menu-navegacion {
   font-size: 1rem;
   /*fon-size. Dicta el tamño de letra*/
   justify-content: flex-end;
@@ -49,12 +41,13 @@
 }
 /*seccion de navegacion para todos los modulos */
 .nav-link {
+  font-weight: bold;
   font-size: 1.3vw;
   outline: none;
   border: none;
-  text-decoration: none;
   list-style-type: none;
-  color: #000000;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   margin-top: 2.5vh;
   /*margin-top. dicta la distancia que tiene arriba*/
   text-decoration: none;
@@ -63,21 +56,21 @@
   /*ease hace que cuando escale con el hover sea suave*/
 }
 
-#menuc1 a.nav-link:hover {
+.menu-navegacion a.nav-link:hover {
   font-weight: bold;
   /* font-weight: bold. Hace la letra mas negrita*/
   outline: none;
   /* outline:none. Elimina el contorno alrededor de un elemento*/
-  color: #000000;
+  color: #ffffff;
   transform: scale(1.1);
 }
 /*boton registrar del index */
-#botonregistrar {
+.boton-registrar-index {
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ffffff;
+  border: none;
   /*grosor del borde del boton*/
   font-size: 1.3vw;
   text-decoration: none;
@@ -89,64 +82,57 @@
 }
 
 /*Estilos para el eslogan y su difuminado del index */
-
-#bienvenida {
-  height: 80vh;
-  background-color: #ffffff;
-  max-width: 90vw;
-  /* max width Establece un ancho máximo para tu sección */
-  margin: 0 auto;
-  /*margin  Auto-centra la sección horizontalmente */
-  padding: 20vh;
-  /* padding Agrega espacio dentro de la sección osea centra el texto en la cajita*/
-  margin-top: 10vh;
-  display: flex;
-  justify-content: center;
-  /* display y justify content acomodan los hijos del cuadro bienvenida AL CENTRO CON CENRTER*/
+.video-fondo-index {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
 }
-
-#eslogan {
-  margin-top: 1vh;
-  /*margin top hace que tenga un espacio arriba del cuadro blanco transparente del centro*/
-  text-align: center;
-  /*centra mi texto*/
-  font-family: "Trebuchet MS", sans-serif;
-  font-size: 4vw;
-  /*font size da el tamaño a mi letra*/
+.index-contenido-central {
+  position: absolute;
+  display: block;
+  left: 80px;
+  margin-top: 38vh;
+}
+.index-subtitulo {
+  position: absolute;
+  margin-top: 150px;
+  font-size: 4rem;
+  color: #ffffff;
+  font-family: "Geneva", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.index-eslogan {
+  position: absolute;
+  font-size: 7rem;
+  color: #ffffff;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.index-btn-comenzar {
+  position: absolute;
+  bottom: 280px;
+  left: 90px;
+  width: 300px;
+  height: 85px;
+  font-size: 2.3rem;
   font-weight: bold;
-  /*font weight bol pone negritas las letras*/
+  border-radius: 15px;
+  background-color: #c5370c;
+  color: #ffffff;
+  border: none;
+  transition: 0.3s ease;
+}
+.index-btn-comenzar:hover {
+  transform: scale(1.1);
+  font-weight: bold;
 }
 
 /*Estilos para el boton de entrar del index*/
 
-#boton1 {
-  text-align: center;
-  margin-top: -25vh;
-}
-
-#entraya {
-  font-weight: bold;
-  background-color: #c5370c;
-  /*hace que elfondo tenga un degradado circular*/
-  border: 1px solid #ffffff;
-  /*grosor del borde del boton*/
-  height: 9vh;
-  width: 14vw;
-  font-size: 2vw;
-  border-radius: 24px;
-  margin-top: 10vh;
-  color: rgb(255, 255, 255);
-  line-height: 7vh;
-  /*centra la letra del boton en medio del cuadrito*/
-  transition: background-color 0.3s ease;
-  transition: transform 0.5s ease;
-  /*ease hace que cuando escale con el hover sea suave*/
-}
-
-#entraya:hover {
-  color: #ffffff;
-  transform: scale(1.1);
-}
 /*Estilos registrar*/
 #contenedorregistrar {
   display: flex;
@@ -160,11 +146,12 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 20vh;
+  margin-top: 15vh;
   width: 25vw;
   height: 75vh;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  background-color: #ffffffef;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  background-color: #ffffffc9;
+  border-radius: 15px;
 }
 
 /*Estilos de boton regitrarse*/
@@ -175,19 +162,19 @@
   border: 1px solid #ccc;
   /* tamaño del grosor borde del boton  */
   border-radius: 15px;
-  position: absolute;
+  margin-top: 20px;
   /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
-  top: 90vh;
+
   /*dicta que se separe de su techo padre 70%*/
   left: 50%;
   /*se aleja de la izquierda a la mitad*/
-  transform: translate(-50%, -50%);
+
   /*lo traslada completamente al centro pero es necesario el left y el top*/
   font-weight: bold;
   /*pone en negrita la letra*/
-  padding: 10px 20px;
+  padding: 12px 30px;
   color: #ffffffc7;
-  font-size: 1vw;
+  font-size: 1.6rem;
 }
 .labelregistro {
   position: absolute;
@@ -195,8 +182,10 @@
   /*los forma en bloque un label en cima del input*/
   font-weight: bold;
   /*pone en negrita la letra*/
-  font-size: 1.2vw; /*tamaño de letra del boton*/
-  margin-top: 1.5vh;
+  font-size: 1.4rem; /*tamaño de letra del boton*/
+  margin-top: 1.35vh;
+  color: #ffffff;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 /*Estilos para el login */
@@ -213,11 +202,12 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 22vh;
+  margin-top: 25vh;
   width: 25vw;
-  height: 70vh;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  background-color: #ffffffef;
+  height: 65vh;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  background-color: #ffffffc9;
+  border-radius: 15px;
 }
 /*este estilo lo comparte con login y registro*/
 #datos {
@@ -234,20 +224,22 @@
 #titulois {
   font-weight: bold;
   /*pone en negrita la letra*/
-  font-size: 2vw;
+  font-size: 3rem;
   margin-bottom: 5px;
+  color: #d8804d;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 /*Estilo para el inicio Sesion*/
 
 /*este estilo lo comparte con login y registro*/
 
 .inputis {
-  height: 4vh;
+  height: 5vh;
   width: 18vw;
   /* ajusta el anclo del input*/
   margin-top: 2vh;
   /*le da espacio al elemento de adentro a su alrededor*/
-  background-color: #ffffff79;
+  background-color: #ffffff9c;
   border: 1px solid #ccc;
   /*ajusta el grosor del borde del input*/
   border-radius: 8px;
@@ -260,9 +252,11 @@
   /*los forma en bloque un label en cima del input*/
   font-weight: bold;
   /*pone en negrita la letra*/
-  font-size: 1.2vw; /*tamaño de letra del boton*/
+  font-size: 1.5rem; /*tamaño de letra del boton*/
   margin-top: 1vh;
   margin-left: 1.3vw;
+  color: #ffffff;
+  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
 }
 /*boton para iniciar sesion*/
 #iniciarsesion {
@@ -271,23 +265,23 @@
   border: 1px solid #ccc;
   /* tamaño del grosor borde del boton  */
   border-radius: 15px;
-  position: absolute;
+  margin-top: 50px;
   /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
-  top: 80vh;
+
   /*dicta que se separe de su techo padre 70%*/
   left: 50%;
   /*se aleja de la izquierda a la mitad*/
-  transform: translate(-50%, -50%);
+
   /*lo traslada completamente al centro pero es necesario el left y el top*/
   font-weight: bold;
   /*pone en negrita la letra*/
-  padding: 10px 20px;
-  color: #ffffff;
-  font-size: 1vw;
+  padding: 12px 30px;
+  color: #ffffffc7;
+  font-size: 1.6rem;
 }
 
 #fondoregistrar {
-  background-image: url(../img/fondoleche.jpg);
+  background-image: url(../img/fondodulcehoy.jpg);
   /*hace que elfondo tenga un degradado circular*/
   background-size: cover;
   background-repeat: no-repeat;
@@ -307,215 +301,41 @@
   font-size: 1.2vw;
 }
 
-/*Estilos para el modulo inicio*/
-#barrac1inicio {
- 
-  z-index: 1;
-  height: 10vh;
-  width: 100vw;
-  /*vw, ancho de pantalla*/
-  position: fixed;
-  background-color: #ffffff;
-}
-#pregunta {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 110vh;
-  width: 100vw;
-}
-.preguntainicio {
-  font-size: 7rem;
-}
-#iniciofondo {
-  background-image: url(../img/fondocolores.jpeg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  scroll-behavior: smooth;
+/*-----------------------------------------Estilos para el modulo inicio-------------------------------------------*/
+
+.inicio-fondo{
+
   overflow-x: hidden;
-}
-/*estilos para las cards*/
-
-
-#cajacards {
-  position: relative;
-  z-index: 0; /* Asegura que la fila de las categorías esté detrás de la barra de encabezado */
-  margin-top: 20vh; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
-  width: 100vw;
-  column-gap: 3vw;/*separa las columnas*/
- row-gap: 7vh;/*separa las filas*/
  
 }
-.Tituloimagen {
+.textos-inicio {
+  height: 20vh;
+}
+
+.pregunta-inicio {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-}
-.titutocars{
-font-size: 1.4rem;
-font-weight: bold;
-color: aliceblue;
-text-shadow: 0 0 5px #000000;
-mix-blend-mode: color-burn;
-}
-#btncatview{
-background-color: #e4007c;
-border-radius: 20px;
-color: aliceblue;
-font-size: 1.2rem;
-font-weight: bold;
-margin-top: 2vh;
-border: #ccc;
-}
-.cards {
-  width: 220px;
-  height: 370px;
-  position: relative;
-}
-
-
-.imagen {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 0 15px 2px rgba(243, 240, 241, 0.534);
-  /*rgba(197, 49, 110, 0.534)*/
-}
-#imagen1 {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: blur(5px);
-  transition: 0.3s ease;
-}
-#imagen1:hover {
-  transform: scale(1.1);
-  filter: blur(1px);
-}
-
-/*Estilos Para el registro de proveedores */
-.labelregistropr {
-  position: absolute;
-  margin-left: -9vw;
-  font-weight: bold;
-  /*pone en negrita la letra*/
-  font-size: 1.2vw; /*tamaño de letra del boton*/
-  margin-top: 1.5vh;
-}
-#registropr {
+  margin-top: 0vh;
+  font-size: 5rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 18vh;
-  width: 50vw;
-  height: 70vh;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  background-color: #ffffffef;
-}
-.selectrepartidor {
-  margin-top: 2vh;
-  width: auto;
-}
-#registrarprov {
-  width: 10vw;
-  background-color: #c5370c;
-  /*hace que el fondo tenga un color */
-  border: 1px solid #ccc;
-  /* tamaño del grosor borde del boton  */
-  border-radius: 15px;
-  position: absolute;
-  /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
-  top: 80vh;
-  /*dicta que se separe de su techo padre 70%*/
-  left: 50%;
-  /*se aleja de la izquierda a la mitad*/
-  transform: translate(-50%, -50%);
-  /*lo traslada completamente al centro pero es necesario el left y el top*/
-  font-weight: bold;
-  /*pone en negrita la letra*/
-  padding: 10px 20px;
   color: #ffffff;
-  font-size: 1vw;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.titulos-inicio {
+  position: absolute;
+  height: 430px;
+  margin-top: 10vh;
+  margin-left: 40px;
+  
+  font-size: 4rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-family: fantasy;
+  
 }
 
-/*Estilos para categorias*/
-#registrocategoria {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 25vh;
-  width: 25vw;
-  height: 55vh;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  background-color: #ffffffef;
-}
-#registrarcategorias {
-  background-color: #c5370c;
-  /*hace que el fondo tenga un color */
-  border: 1px solid #ccc;
-  /* tamaño del grosor borde del boton  */
-  border-radius: 15px;
-  position: absolute;
-  /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
-  top: 65vh;
-  /*dicta que se separe de su techo padre 70%*/
-  left: 50%;
-  /*se aleja de la izquierda a la mitad*/
-  transform: translate(-50%, -50%);
-  /*lo traslada completamente al centro pero es necesario el left y el top*/
-  font-weight: bold;
-  /*pone en negrita la letra*/
-  padding: 10px 20px;
-  color: #ffffff;
-  font-size: 1vw;
-}
-.labelregistrocat {
-  position: absolute;
-  display: block;
-  /*los forma en bloque un label en cima del input*/
-  font-weight: bold;
-  /*pone en negrita la letra*/
-  font-size: 1.2vw; /*tamaño de letra del boton*/
-  margin-top: 2vh;
-}
-#titulocategoria {
-  font-weight: bold;
-  /*pone en negrita la letra*/
-  font-size: 2vw;
-}
-.inputcat {
-  height: 4vh;
-  width: 18vw;
-  /* ajusta el anclo del input*/
-  margin-top: 4vh;
-  /*le da espacio al elemento de adentro a su alrededor*/
-  background-color: #ffffff79;
-  border: 1px solid #ccc;
-  /*ajusta el grosor del borde del input*/
-  border-radius: 8px;
-  font-size: 1.2vw;
-}
-#datoscat {
-  border-radius: 5px;
-  font-size: 1.2rem;
-  margin-top: -55vh;
-}
-
-/*empiezan estilos para el dropdown de inicio*/
+/***********************************empiezan estilos para el dropdown de inicio*************************/
 .dropdown {
   position: relative;
   display: inline-block;
@@ -540,7 +360,7 @@ border: #ccc;
 .dropdown:hover .dropdown-content {
   display: block;
 }
-#btngrupinicio {
+.btn-grup-inicio {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -556,13 +376,366 @@ border: #ccc;
   transition: transform 0.5s ease;
 }
 
-/*terminan estilos de dropdown inicio*/
+/* ***************************terminan estilos de dropdown inicio*******************************/
+/*-----------------------------------------------------Estilos para las categorias-----------------------------------------------------*/
+
+
+.container-cards-categorias {
+  display: flex; /*pone las cards en linea osea uno a lado del otro*/
+  width: 52vw;
+  height: 430px;
+  overflow-x: auto; /*hace que las tarjetas respeten el contenido de arriba y no lo sobrepasen*/
+  
+  animation: efecto-productos 0.9s ease-in-out;
+  z-index: 1000;
+}
+
+.card-categorias {
+  position: relative;
+  width: 230px;
+  height: 380px;
+  margin-right: 20px;
+  margin-left: 40px; /*separacion entre tarjetas*/
+  margin-bottom: 20px;
+  top: 20px;
+}
+
+.imagen-categorias {
+  object-fit: cover; /*cubre toda la imagen y la centra*/
+  width: 230px;
+  height: 380px;
+}
+.texto-categorias {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  color: aliceblue;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.ver-categorias {
+  position: absolute;
+  right: 35px;
+  bottom: 10px;
+  height: 45px;
+  font-size: 1.3rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  background-color: #e4007c;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.ver-categorias:hover {
+  transform: scale(1.1);
+}
+
+.Introduccion-producto {
+  position: absolute;
+  top: 320px;
+  right: 12px;
+  background-color: #f1f1f1bd;
+  height: 40vh;
+  width: 40vw;
+}
+.txt-producto {
+  margin-left: 40px;
+  margin-top: 5vh;
+  color: rgba(30, 115, 141, 0.788);
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.video-fondo-inicio {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+
+  object-fit: contain;
+ 
+  z-index: -1;
+}
+.cuadro-texto-video{
+  position: absolute;
+  width: 25vw;
+  height: 20vh;
+  margin-top: 15vh;
+  margin-left: 65vw; 
+  z-index: 2;
+}
+.texto-video {
+  text-align: center;
+  position: absolute;
+  color: #ffffff; 
+  font-weight: 500;
+  font-size: 2.6rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  animation: skew 3s 1;
+  animation-fill-mode: forwards;
+}
+@keyframes skew{
+  0%{
+    transform:translateX(-210px)
+  }
+  
+
+  100%{
+    transform: translateX(30px)
+  }
+}
+
+
+
+
+/*************************************estilos para el scroll**********************************/
+/* Estilo del track */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho del scrollbar */
+ 
+}
+
+/* Estilo del thumb (el "botón" del scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del thumb */
+  border-radius: 6px; /* Radio de la esquina del thumb */
+}
+
+/* Estilo del track cuando se desplaza */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color del track */
+}
+
+/* Estilo del thumb al estar activo (si el usuario interactúa con él) */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a15995; /* Color del thumb al pasar el mouse */
+}
+
+/* Estilo del thumb al estar seleccionado (si el usuario lo está arrastrando) */
+::-webkit-scrollbar-thumb:active {
+  background-color: #ac2e86; /* Color del thumb al hacer click en él */
+}
+
+/*---------------------------------------------------Estilos para mostrar Productos-----------------------------------------*/
+
+.container-productos {
+  background-image: url(../img/fondodulcehoy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.productos {
+  height: 15vh;
+  overflow-x: hidden;
+}
+.nav-mostrar-productos {
+  position: fixed;
+  right: 50px;
+  top: 20px;
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.container-cards {
+  margin-top: 15vh;
+  justify-content: center; /*centra las terjetas*/
+  width: 60vw;
+  height: 70vh;
+  overflow-x: hidden; /*hace que las tarjetas respeten el contenido de arriba y no lo sobrepasen*/
+  animation: efecto-productos 0.9s ease-in-out;
+}
+@keyframes efecto-productos {
+  0% {
+    
+    filter: blur(100px);
+  }
+
+  100% {
+   
+    filter: blur(10px);
+  }
+}
+
+.card-producto {
+  position: relative;
+  width: 230px;
+  height: 380px;
+  margin-left: 20px; /*separacion entre tarjetas*/
+  margin-bottom: 20px;
+  top: 20px;
+}
+.imagen-producto {
+  object-fit: cover; /*cubre toda la imagen y la centra*/
+  width: 230px;
+  height: 380px;
+}
+.texto-producto {
+  position: absolute;
+  left: 40px;
+  top: 20px;
+  color: aliceblue;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.descripcion-producto {
+  position: absolute;
+  left: 40px;
+  bottom: 70px;
+  font-size: 1rem;
+  color: aliceblue;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.sub-texto-producto {
+  position: absolute;
+  left: 40px;
+  bottom: 20px;
+  font-size: 1rem;
+  color: aliceblue;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.agregar-producto {
+  position: absolute;
+  right: 0px;
+  bottom: 10px;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.agregar-producto:hover {
+  transform: scale(1.1);
+}
+
+/*----------------------------------------Estilos Para el registro de proveedores-------------------------------------------- */
+.labelregistropr {
+  position: absolute;
+  margin-left: -9vw;
+  font-weight: bold;
+  /*pone en negrita la letra*/
+  font-size: 1.5rem; /*tamaño de letra del boton*/
+  margin-top: 1.2vh;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+#registropr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20vh;
+  width: 50vw;
+  height: 70vh;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  background-color: #ffffffc9;
+  border-radius: 15px;
+}
+.selectrepartidor {
+  margin-top: 2vh;
+  width: auto;
+}
+#registrarprov {
+  width: 10vw;
+  background-color: #c5370c;
+  /*hace que el fondo tenga un color */
+  border: 1px solid #ccc;
+  /* tamaño del grosor borde del boton  */
+  border-radius: 15px;
+  position: absolute;
+  /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
+  top: 83.5vh;
+  /*dicta que se separe de su techo padre 70%*/
+  left: 50%;
+  /*se aleja de la izquierda a la mitad*/
+  transform: translate(-50%, -50%);
+  /*lo traslada completamente al centro pero es necesario el left y el top*/
+  font-weight: bold;
+  /*pone en negrita la letra*/
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 1vw;
+}
+
+/*Estilos para categorias*/
+#registrocategoria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 25vh;
+  width: 28vw;
+  height: 65vh;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  background-color: #ffffffc9;
+  border-radius: 15px;
+}
+#registrarcategorias {
+  background-color: #c5370c;
+  /*hace que el fondo tenga un color */
+  border: 1px solid #ccc;
+  /* tamaño del grosor borde del boton  */
+  border-radius: 15px;
+  margin-top: 50px;
+  /*absolute se utiliza para posicionar un elemento de manera absoluta con respecto a su ancestro*/
+
+  /*dicta que se separe de su techo padre 70%*/
+  left: 50%;
+  /*se aleja de la izquierda a la mitad*/
+
+  /*lo traslada completamente al centro pero es necesario el left y el top*/
+  font-weight: bold;
+  /*pone en negrita la letra*/
+  padding: 12px 30px;
+  color: #ffffffc7;
+  font-size: 1.6rem;
+}
+.labelregistrocat {
+  position: absolute;
+  display: block;
+  /*los forma en bloque un label en cima del input*/
+  font-weight: bold;
+  /*pone en negrita la letra*/
+  font-size: 1.8rem; /*tamaño de letra del boton*/
+  margin-top: 2vh;
+  margin-left: 70px;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+#titulocategoria {
+  font-weight: bold;
+  /*pone en negrita la letra*/
+  font-size: 3rem;
+  margin-top: 10px;
+  color: #d8804d;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.inputcat {
+  height: 4vh;
+  width: 18vw;
+  /* ajusta el anclo del input*/
+  margin-top: 4vh;
+  /*le da espacio al elemento de adentro a su alrededor*/
+  background-color: #ffffff79;
+  border: 1px solid #ccc;
+  /*ajusta el grosor del borde del input*/
+  border-radius: 8px;
+  font-size: 1.2vw;
+}
+#datoscat {
+  border-radius: 5px;
+  font-size: 1.2rem;
+  margin-top: -55vh;
+}
 
 /*Estilos para mostrarProductos*/
-#cajacardspro{
+#cajacardspro {
   position: relative;
   z-index: 0; /* Asegura que la fila de las categorías esté detrás de la barra de encabezado */
-  margin-top: 20vh; 
+  margin-top: 20vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr; /* Dos columnas del mismo tamaño */
   column-gap: -13vw;
@@ -597,21 +770,21 @@ border: #ccc;
   top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
-text-align: center;
+  text-align: center;
 }
-.titutocarsmp{
+.titutocarsmp {
   font-size: 1.4rem;
   font-weight: bold;
   color: aliceblue;
   text-shadow: 0 0 5px #000000;
   mix-blend-mode: color-burn;
-  }
-  #btnmp{
-    background-color: #e4007c;
-    border-radius: 20px;
-    color: aliceblue;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 2vh;
-    border: #ccc;
-    }
+}
+#btnmp {
+  background-color: #e4007c;
+  border-radius: 20px;
+  color: aliceblue;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 2vh;
+  border: #ccc;
+}

@@ -17,14 +17,15 @@
 
 
   <div class="container-fluid" id="fondoregistrar">
-  <div class="row" id="barrac1"><!-- fila para el encabezado -->
+  <div class="row barra-navegacion"><!-- fila para el encabezado -->
       <div class="col">
-        <img src="img/logosfs.png" alt="" id="logo">
+        <img src="img/logosfs.png" alt="" class="logo">
         </div>
         
         <div class="col">
-        <nav class="nav navbar-expand-lg" id="menuc1">
-        <a class="nav-link" href="inicio.php">Regresar</a>
+        <nav class="nav navbar-expand-lg menu-navegacion" >
+         
+          <a class="nav-link" href="../index.php">Regresar</a>
         </nav>
       </div>
     </div><!-- termina fila para el encabezado -->
@@ -38,6 +39,8 @@
             <label for="" class="labelregistrocat">Nombre</label>
             <br>
             <input class="inputcat" name ="nombre" type="text" placeholder="nombre">
+            <br>
+            <label for="" class="labelregistrocat">Ruta de Imagen</label>
             <br>
             <input class="inputcat" name ="imagen" type="text" placeholder="Escribe la ruta de la imagen">
             

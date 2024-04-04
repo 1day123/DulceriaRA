@@ -14,34 +14,39 @@
 </head>
 
 <body>
-  <div class="container-fluid" id="fondoc1">
-    <div class="row" id="barrac1">
+  <div class="container-fluid index-fondo" >
+    <video muted autoplay loop class="video-fondo-index">
+      <source src="Cliente/img/videofondo.mp4" type="video/mp4">
+    </video>
+
+    <div class="row barra-navegacion " >
       <div class="col">
-        <img src="Cliente/img/logosfs.png" alt="" id="logo">
+        <img src="Cliente/img/logosfs.png" alt="" class="logo">
       </div>
 
       <div class="col">
-        <nav class="nav navbar-expand-lg" id="menuc1">
+        <nav class="nav navbar-expand-lg menu-navegacion" >
           <a class="nav-link" href="Cliente/inicio.php">Inicio</a>
           <a class="nav-link" href="#">Categorias</a>
           <a class="nav-link" href="#">Mis compras</a>
           <a class="nav-link" href="#">Buscar</a>
-          <a class="nav-link" href="Cliente/registrarse.php" id="botonregistrar" style="color: aliceblue">Registrar</a>
+          <a class="nav-link boton-registrar-index" href="Cliente/registrarse.php"  style="color: aliceblue">Registrar</a>
         </nav>
 
       </div>
+
+    </div>
+    <div class="row">
+      <div class="col-8 index-contenido-central">
+        <h1 class="index-eslogan">Dulces de México</h1>
+        <h4 class="index-subtitulo">Descubre la magia del dulce en cada mordisco!</h4>
+        
+      </div>
       
+        <a href="Cliente/iniciarsesion.php">
+          <button type="button" class="index-btn-comenzar">Comenzar</button>
+        </a>
     </div>
-    <div class="row" id="barra2c1">
-      <section id="bienvenida">
-        <h1 id="eslogan">"Descubre la magia de Puebla en cada dulce: ¡tradición en cada mordisco!"</h1>
-    </div>
-    <section id="boton1">
-      <a href="Cliente/iniciarsesion.php">
-        <button class="boton" id="entraya">Compra Ya!</button>
-      </a>
-    </section>
-    </section>
 
 
 

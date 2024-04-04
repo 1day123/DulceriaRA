@@ -13,22 +13,25 @@
     <title>Inicio</title>
 </head>
 
-<body>
+<body class="inicio-fondo">
 
-    <div class="container-fluid" id="iniciofondo"><!--contenedor padre  -->
-        <div class="row" id="barrac1inicio"><!-- fila para el encabezado -->
+    <div class="container-fluid inicio-fondo"><!--contenedor padre  -->
+    <video muted autoplay loop class="video-fondo-inicio">
+        <source src="img/video-inicio.mp4" type="video/mp4">
+    </video>
+        <div class="row "><!-- fila para el encabezado -->
             <div class="col">
-                <img src="img/logosfs.png" alt="" id="logo">
+                <img src="img/logosfs.png" alt="" class="logo">
             </div>
 
             <div class="col">
-                <nav class="nav navbar-expand-lg" id="menuc1">
+                <nav class="nav navbar-expand-lg menu-navegacion">
                     <a class="nav-link" href="#pregunta">Inicio</a>
                     <a class="nav-link" href="#cajacards">Categorias</a>
                     <a class="nav-link" href="#">Mis compras</a>
                     <a class="nav-link" href="#">Buscar</a>
                     <div class="dropdown">
-                        <button class="nav-link" href="Cliente/registrarse.php" id="btngrupinicio" style="color: aliceblue">Registrar</button>
+                        <button class="nav-link btn-grup-inicio" href="Cliente/registrarse.php" style="color: aliceblue">Registrar</button>
                         <div class="dropdown-content">
                             <a href="RegistrarProveedores.php">Registrar Proveedores</a>
                             <a href="RegistrarRepartidores.php">Registrar Repartidores</a>
@@ -44,48 +47,51 @@
 
 
         </div><!-- fila para el encabezado -->
-        <div class="row" id="pregunta"><!-- fila para la pregunta -->
-            <h6 class="preguntainicio">¿Que deceas comprar?</h6>
+        <div class="row textos-inicio"><!-- fila para la pregunta -->
+            <h6 class="pregunta-inicio">¿Que deceas comprar? </h6>
+
+
+            <h4 class="titulos-inicio"> Categorias</h4>
+
         </div><!-- fin fila para el encabezado -->
-        <div class="row" id="cajacards"><!-- fila para las categorias -->
-  
+        <div class="cuadro-texto-video">
+            <h4 class="texto-video">Hoy es un día para saborear</h4>
+        </div>
+        <div class="container-cards-categorias"><!-- fila para las categorias -->
+
+
+
+
             <?php
             include("../Servidor/Conexion.php");
+
             $consulta = "SELECT * FROM categorias";
             $ejecutar = mysqli_query($conexion, $consulta);
 
-
-
-            if (mysqli_num_rows($ejecutar)) {
-                while ($datos = mysqli_fetch_array($ejecutar)) {
+            if (mysqli_num_rows($ejecutar) > 0) {
+                while ($datos = mysqli_fetch_assoc($ejecutar)) {
                     $rutaimagen = $datos['imagen_categoria'];
                     $nombrecategoria = $datos['nombre'];
                     $id_categoria = $datos['id_categoria'];
 
-                    
-                    echo "<form class='col'  action='MostrarProductos.php' method='POST'>
-                    <div class='cards'>
-                    <img class='imagen' id='imagen1' src='$rutaimagen' >
-                    <div class='Tituloimagen'>
-                    <h4 class='titutocars'>
-                        $nombrecategoria
+                    echo "<form class='card-categorias'  action='MostrarProductos.php' method='POST'>
+                        <img class='imagen-categorias' src='$rutaimagen' alt=''>
+                        <h1 class='texto-categorias'>$nombrecategoria</h1>
                         <input type='hidden' value='$id_categoria' name='id_categoria'>
-                        <button type='submit' id='btncatview'>Ver categoría</button>
-                    </h4>
-                </div>
-                    </div>                    
-                    </form>";
-                    
+                        <button type='submit' class='ver-categorias'> Ver productos</button>
+                     </form>";
                 }
             } else {
                 echo "te fallo master";
             }
-
-
             ?>
 
 
+
         </div><!-- fin fila para las categorias -->
+
+
+
     </div><!-- fin contenedor padre  -->
 
 
