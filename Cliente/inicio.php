@@ -16,9 +16,9 @@
 <body class="inicio-fondo">
 
     <div class="container-fluid inicio-fondo"><!--contenedor padre  -->
-    <video muted autoplay loop class="video-fondo-inicio">
-        <source src="img/video-inicio.mp4" type="video/mp4">
-    </video>
+        <video muted autoplay loop class="video-fondo-inicio">
+            <source src="img/video-inicio.mp4" type="video/mp4">
+        </video>
         <div class="row "><!-- fila para el encabezado -->
             <div class="col">
                 <img src="img/logosfs.png" alt="" class="logo">
@@ -48,7 +48,22 @@
 
         </div><!-- fila para el encabezado -->
         <div class="row textos-inicio"><!-- fila para la pregunta -->
-            <h6 class="pregunta-inicio">¿Que deceas comprar? </h6>
+
+            <?php
+            session_start(); // Inicia la sesión si no está iniciada
+
+            // Verifica si el nombre de usuario está almacenado en la sesión
+            if (isset($_SESSION['nombre'])) {
+                $nombreUsuario = $_SESSION['nombre'];
+                // Muestra el nombre de usuario en la página
+                echo "<h6 class='pregunta-inicio'>Hola, $nombreUsuario ¿Qué vas a comprar hoy?</h6>";
+            } else {
+                
+                echo "quien eres tu";
+            }
+            ?>
+
+
 
 
             <h4 class="titulos-inicio"> Categorias</h4>
@@ -56,6 +71,10 @@
         </div><!-- fin fila para el encabezado -->
         <div class="cuadro-texto-video">
             <h4 class="texto-video">Hoy es un día para saborear</h4>
+        </div>
+
+        <div class="fondo-blanco-inicio">
+
         </div>
         <div class="container-cards-categorias"><!-- fila para las categorias -->
 
@@ -89,6 +108,12 @@
 
 
         </div><!-- fin fila para las categorias -->
+        <div class="row seccion-especial-inicio">
+            <img class="imagen-seccion-inicio"  src="img/fondoinicio.jpg" alt="" >
+            <img class="imagen-seccion-inicio"  src="img/fondoinicio.jpg" alt="" >
+            <img class="imagen-seccion-inicio"  src="img/fondoinicio.jpg" alt="" >
+            <img class="imagen-seccion-inicio"  src="img/fondoinicio.jpg" alt="" >
+        </div>
 
 
 

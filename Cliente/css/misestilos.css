@@ -303,36 +303,34 @@
 
 /*-----------------------------------------Estilos para el modulo inicio-------------------------------------------*/
 
-.inicio-fondo{
-
+.inicio-fondo {
   overflow-x: hidden;
- 
+  overflow-y: hidden;
 }
 .textos-inicio {
+  position: absolute;
   height: 20vh;
+  width: 100vw;
 }
 
 .pregunta-inicio {
   position: absolute;
-  margin-top: 0vh;
-  font-size: 5rem;
-  display: flex;
-  justify-content: center;
+  margin-top: 3vh;
+  font-size: 4rem;
+  left: 50px;
   color: #ffffff;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .titulos-inicio {
   position: absolute;
-  height: 430px;
-  margin-top: 10vh;
-  margin-left: 40px;
-  
-  font-size: 4rem;
+  margin-top: 11.5vh;
+  margin-left: 150px;
+  font-size: 2.5rem;
   color: #ffffff;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-  font-family: fantasy;
-  
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 /***********************************empiezan estilos para el dropdown de inicio*************************/
@@ -379,43 +377,46 @@
 /* ***************************terminan estilos de dropdown inicio*******************************/
 /*-----------------------------------------------------Estilos para las categorias-----------------------------------------------------*/
 
-
 .container-cards-categorias {
   display: flex; /*pone las cards en linea osea uno a lado del otro*/
-  width: 52vw;
-  height: 430px;
+  width: 63vw;
+  height: 30vh;
+
+  margin-left: 50px;
+  margin-top: 15vh;
+  overflow-y: hidden;
   overflow-x: auto; /*hace que las tarjetas respeten el contenido de arriba y no lo sobrepasen*/
-  
   animation: efecto-productos 0.9s ease-in-out;
   z-index: 1000;
 }
 
 .card-categorias {
   position: relative;
+
   width: 230px;
   height: 380px;
   margin-right: 20px;
-  margin-left: 40px; /*separacion entre tarjetas*/
-  margin-bottom: 20px;
+  margin-left: 4px; /*separacion entre tarjetas*/
   top: 20px;
 }
 
 .imagen-categorias {
   object-fit: cover; /*cubre toda la imagen y la centra*/
-  width: 230px;
-  height: 380px;
+  width: 180px;
+  height: 280px;
 }
 .texto-categorias {
   position: absolute;
   left: 10px;
   top: 20px;
   color: aliceblue;
+  font-size: 2rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .ver-categorias {
   position: absolute;
-  right: 35px;
-  bottom: 10px;
+  right: 15px;
+  bottom: 115px;
   height: 45px;
   font-size: 1.3rem;
   color: #ffffff;
@@ -454,68 +455,95 @@
   left: 0;
 
   object-fit: contain;
- 
+
   z-index: -1;
 }
-.cuadro-texto-video{
+.cuadro-texto-video {
   position: absolute;
-  width: 25vw;
+  width: 20vw;
   height: 20vh;
   margin-top: 15vh;
-  margin-left: 65vw; 
+  margin-left: 75vw;
   z-index: 2;
 }
-.texto-video {
-  text-align: center;
+.fondo-blanco-inicio {
   position: absolute;
-  color: #ffffff; 
+  height: 380px;
+  width: 97vw;
+  top: 323px;
+  margin-left: 1vw;
+  margin-right: 5vw;
+  background-color: #f9f9f95e;
+  z-index: -1;
+}
+.texto-video {
+  position: absolute;
+  top: 85px;
+  text-align: center;
+  color: #ffffff;
   font-weight: 500;
   font-size: 2.6rem;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-  animation: skew 3s 1;
-  animation-fill-mode: forwards;
-}
-@keyframes skew{
-  0%{
-    transform:translateX(-210px)
-  }
+  animation: salirleft 3s 1;
   
+}
+@keyframes salirleft {
+  0% {
+    transform: translateX(-210px);
+  }
 
-  100%{
-    transform: translateX(30px)
+  100% {
+    transform: translateX(30px);
   }
 }
+.seccion-especial-inicio {
+  height: 20vh;
+  width: 1200px;
+  margin-top: 80px;
+  margin-left: 350px;
+  animation: salirdebajo 3s 1;
+}
+.imagen-seccion-inicio {
+  filter: blur(3px);
+  height: 200px;
+  width: 300px;
+}
+@keyframes salirdebajo {
+  0% {
+    transform: translateY(310px);
+  }
 
-
-
+  100% {
+    transform: translateY(5px);
+  }
+}
 
 /*************************************estilos para el scroll**********************************/
 /* Estilo del track */
 ::-webkit-scrollbar {
   width: 12px; /* Ancho del scrollbar */
- 
 }
 
 /* Estilo del thumb (el "botón" del scrollbar) */
 ::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color del thumb */
+  background-color: #8d4925; /* Color del thumb */
   border-radius: 6px; /* Radio de la esquina del thumb */
 }
 
 /* Estilo del track cuando se desplaza */
 ::-webkit-scrollbar-track {
-  background-color: #f1f1f1; /* Color del track */
+  background-color: #320000; /* Color del track */
 }
 
 /* Estilo del thumb al estar activo (si el usuario interactúa con él) */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #a15995; /* Color del thumb al pasar el mouse */
+  background-color: #5d2417; /* Color del thumb al pasar el mouse */
 }
 
 /* Estilo del thumb al estar seleccionado (si el usuario lo está arrastrando) */
 ::-webkit-scrollbar-thumb:active {
-  background-color: #ac2e86; /* Color del thumb al hacer click en él */
+  background-color: #5d2417; /* Color del thumb al hacer click en él */
 }
 
 /*---------------------------------------------------Estilos para mostrar Productos-----------------------------------------*/
@@ -552,12 +580,10 @@
 }
 @keyframes efecto-productos {
   0% {
-    
     filter: blur(100px);
   }
 
   100% {
-   
     filter: blur(10px);
   }
 }
