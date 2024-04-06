@@ -13,11 +13,11 @@ if (mysqli_num_rows($ejecutar)) {
     $datos = mysqli_fetch_array($ejecutar);
     
     // Guarda el nombre de usuario en la sesión
-    $_SESSION['nombre'] = $datos['nombre'];
+    $_SESSION['usuario'] = $datos['id_usuario'];
     
     
     header("Location: ../Cliente/inicio.php");// Redirige al usuario a la página de inicio
-    exit(); // Es importante detener la ejecución del script después de redirigir al usuario
+ 
 } else {
     echo "te fallo algo master";
 }

@@ -40,7 +40,7 @@
                         </div>
                     </div>
 
-                    <a class="nav-link" href="../index.php">Salir</a>
+                    <a class="nav-link" href="../Servidor/cerrarsesión.php">Salir</a>
                 </nav>
 
             </div>
@@ -50,17 +50,47 @@
         <div class="row textos-inicio"><!-- fila para la pregunta -->
 
             <?php
-            session_start(); // Inicia la sesión si no está iniciada
 
-            // Verifica si el nombre de usuario está almacenado en la sesión
-            if (isset($_SESSION['nombre'])) {
-                $nombreUsuario = $_SESSION['nombre'];
-                // Muestra el nombre de usuario en la página
-                echo "<h6 class='pregunta-inicio'>Hola, $nombreUsuario ¿Qué vas a comprar hoy?</h6>";
-            } else {
-                
-                echo "quien eres tu";
+            include("../Servidor/Conexion.php");
+            /*abrimos la bodega temporal del navegador*/
+            session_start();
+            /*guardamos la variable que entra de la bodeega temporal en una variable local para usarla aqui*/
+            $id=$_SESSION['usuario'];
+
+            /*consulta para seleccionar el nombre completo de quien inicio sesion*/
+            $consulta="SELECT * FROM usuarios WHERE id_usuario=$id";
+
+            $ejecutar=mysqli_query($conexion,$consulta);
+
+            if (mysqli_num_rows($ejecutar)>0) {
+                $datos=mysqli_fetch_array($ejecutar);
+
+                echo "<h6 class='pregunta-inicio'>Hola ".$datos['nombre']." ¿Qué vas a comprar hoy?</h6>";
+
             }
+
+            /*consulta para mostrar el nombre del tipo de usuario dependiendo de su id_usuario*/
+            $consulta2="SELECT u.id_usuario,
+                            t.nombre
+                         FROM usuarios as u
+                         INNER JOIN tipo_usuarios as t
+                         ON u.id_tipo_usuario=t.id_tipo_usuarios
+                         AND u.id_usuario=$id";
+
+            $ejecutar2=mysqli_query($conexion,$consulta2);
+
+            if (mysqli_num_rows($ejecutar2)>0) {
+                $datos2=mysqli_fetch_array($ejecutar2);
+                echo "<h6 class='pregunta-inicio-tipo_usu'> Tipo de usuario: ".$datos2['nombre']."</h6>";
+
+             
+
+
+            }
+
+
+
+
             ?>
 
 
@@ -109,10 +139,10 @@
 
         </div><!-- fin fila para las categorias -->
         <div class="row seccion-especial-inicio">
-            <img class="imagen-seccion-inicio"  src="img/fondoinicio.jpg" alt="" >
-            <img class="imagen-seccion-inicio"  src="img/fondoinicio.jpg" alt="" >
-            <img class="imagen-seccion-inicio"  src="img/fondoinicio.jpg" alt="" >
-            <img class="imagen-seccion-inicio"  src="img/fondoinicio.jpg" alt="" >
+            <img class="imagen-seccion-inicio" src="img/fondoinicio.jpg" alt="">
+            <img class="imagen-seccion-inicio" src="img/fondoinicio.jpg" alt="">
+            <img class="imagen-seccion-inicio" src="img/fondoinicio.jpg" alt="">
+            <img class="imagen-seccion-inicio" src="img/fondoinicio.jpg" alt="">
         </div>
 
 

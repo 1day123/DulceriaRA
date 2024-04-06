@@ -312,11 +312,22 @@
   height: 20vh;
   width: 100vw;
 }
-
+.pregunta-inicio-tipo_usu {
+  position: absolute;
+  margin-top: -12vh;
+  margin-left: 10vw;
+  font-size: 2rem;
+  left: 50px;
+  color: #ffffff;
+  width: 22vw;
+  background-color: #74340f86;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 .pregunta-inicio {
   position: absolute;
   margin-top: 3vh;
-  font-size: 4rem;
+  font-size: 3rem;
   left: 50px;
   color: #ffffff;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -326,7 +337,7 @@
   position: absolute;
   margin-top: 11.5vh;
   margin-left: 150px;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #ffffff;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -453,7 +464,6 @@
   width: 100vw;
   top: 0;
   left: 0;
-
   object-fit: contain;
 
   z-index: -1;
@@ -486,7 +496,6 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
   animation: salirleft 3s 1;
-  
 }
 @keyframes salirleft {
   0% {
