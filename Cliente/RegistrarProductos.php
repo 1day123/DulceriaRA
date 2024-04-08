@@ -69,6 +69,7 @@
               /*
   echo "repartidores".$datos['id_usuario'];// es para debuguear el array/ solo muestra la primera posicion del arreglo osea el primer id, se puede poner en el if
   */
+  include("../Cliente/componentesPHP/Categorias.php");
 
               ?>
               <select name="proveedor" class="selectrepartidor">

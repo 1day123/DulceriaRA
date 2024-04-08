@@ -302,6 +302,18 @@
 }
 
 /*-----------------------------------------Estilos para el modulo inicio-------------------------------------------*/
+#barramenu{
+  position: absolute;
+  height: 100%;
+  opacity: 0;
+  width: 0;
+  right:  0;
+  top: 0;
+  background-color: #c5370c;
+  z-index: 3;
+  transition: 1s ease;
+}
+
 
 .inicio-fondo {
   overflow-x: hidden;
