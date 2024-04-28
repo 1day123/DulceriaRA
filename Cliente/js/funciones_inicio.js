@@ -1,12 +1,11 @@
 const cuadrodesplegable = document.getElementById('barramenu');/*mando a traer el div que aparece despues de oprimir el icono carrito*/
 /*Esta variable es solo para hacer los estilos y se los hago a la barramenu*/
-
-
 const botoncarrito = document.getElementById('btncarrito');/*Mnado a traer lo que tiene el id=btncarrito */
-                                                            /*osea el icono que aparece en mi manu navegador}=🛒*/
-          
+                                                            /*osea el icono que aparece en mi manu navegador}=🛒*/       
 const botoncerrarcarrito=document.getElementById('btncerrarcarrito');/*Mnado a traer lo que tiene el id=btncerrarcarrito */
                                                                     /*OSEA  LA ❎ QUE ESTA dentro de la barramenu*/
+
+
 
 botoncarrito.addEventListener('click', function () {/*Estas funciones son para los iconos que estan a la vista, osea los que se pueden manipular*/
                                                     /*En este caso le hago el evento botoncarrito=id=btncarrito */
